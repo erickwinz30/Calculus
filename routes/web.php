@@ -16,9 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/health-tips', function () {
+    return view('healthtips');
+});
 Route::get('/aboutus', function () {
     return view('about');
 });
-Route::get('/health-tips', function () {
-    return view('healthtips');
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/register', function () {
+    return view('registrasi');
 });
