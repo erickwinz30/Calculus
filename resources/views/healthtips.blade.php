@@ -132,49 +132,56 @@
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips1.jpg') }}" alt="Tips Pola Makan untuk Diet Sehat">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Tips Pola Makan untuk Diet Sehat</h5>
-                    <p class="tips-item__description">Kunci diet sehat adalah menyeimbangkan jumlah kalori yang dikonsumsi dengan yang dikeluarkan. Selain itu, diet yang sehat juga perlu dilakukan dengan memenuhi kebutuhan nutrisi tubuh, seperti protein, karbohidrat, lemak, serta aneka vitamin dan mineral.</p>
+                    <p class="tips-item__description">Diet kerap digunakan sebagai cara untuk mendapatkan berat badan ideal. Namun, pola makan untuk diet sehat bukan dengan melewatkan waktu makan. Kunci diet sehat adalah menyeimbangkan jumlah kalori yang dikonsumsi dengan yang dikeluarkan dan memenuhi kebutuhan nutrisi tubuh, seperti protein, karbohidrat, lemak, serta aneka vitamin dan mineral.</p>
+                    <a class="read-more__btn" href="http://www.alodokter.com/tips-pola-makan-untuk-diet-sehat" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips2.jpg') }}" alt="Ingin Diet Alami Tanpa Obat, Ini Tipsnya">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Ingin Diet Alami Tanpa Obat, Ini Tipsnya</h5>
-                    <p class="tips-item__description">Daripada menjalani program diet instan yang berisiko membahayakan dan tidak jelas efektivitasnya, kamu bisa lho mencoba diet alami tanpa obat untuk mendapatkan bentuk tubuh yang diimpikan. Selain lebih aman, diet alami tanpa obat juga dapat memberikan sejumlah manfaat lain untuk kesehatan.</p>
+                    <p class="tips-item__description">Daripada menjalani program diet instan yang berisiko, kamu bisa mencoba diet alami tanpa obat untuk mendapatkan bentuk tubuh yang diimpikan. Selain lebih aman, diet alami tanpa obat dapat memberikan sejumlah manfaat lain untuk kesehatan, misalnya kamu dapat mencapai berat badan ideal yang ditargetkan serta mendapatkan bentuk tubuh langsing dan sehat.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/ingin-diet-alami-tanpa-obat-ini-tipsnya" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips3.jpg') }}" alt="Tips Diet Rendah Garam yang Aman dan Tepat">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Tips Diet Rendah Garam yang Aman dan Tepat</h5>
-                    <p class="tips-item__description">Diet rendah garam biasa disarankan untuk penderita gagal jantung atau tekanan darah tinggi. Tak hanya untuk menjaga kesehatan, pola makan ini juga dapat membantu mengendalikan penyakit tersebut. Namun, cara melakukan diet ini harus tepat, agar kadar garam (natrium) dalam tubuh tetap seimbang dan manfaat pola makan ini benar-benar optimal.</p>
+                    <p class="tips-item__description">Diet rendah garam disarankan untuk penderita gagal jantung atau tekanan darah tinggi. Pola makan ini dapat membantu mengendalikan penyakit tersebut. Namun, cara melakukan diet ini harus tepat, agar kadar garam (natrium) dalam tubuh tetap seimbang dan manfaat pola makan ini benar-benar optimal.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/tips-sehat-untuk-diet-rendah-garam" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips4.jpg') }}" alt="Cara Mengurangi Kolesterol dengan Beta Glucan dan Inulin">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Cara Mengurangi Kolesterol dengan Beta Glucan dan Inulin</h5>
-                    <p class="tips-item__description">Kadar kolesterol yang terlalu tinggi dan tidak terkontrol bisa menimbulkan beragam masalah kesehatan serius, mulai dari stroke hingga serangan jantung. Salah satu cara menurunkan kolesterol tinggi adalah dengan mengonsumsi makanan yang kaya serat, termasuk beta glucan dan inulin.</p>
+                    <p class="tips-item__description">Kadar kolesterol yang terlalu tinggi dan tidak terkontrol bisa menimbulkan masalah kesehatan, mulai dari stroke hingga serangan jantung yang terkadang tidak menimbulkan gejala. Salah satu cara menurunkan kolesterol tinggi adalah dengan mengonsumsi makanan yang kaya serat, termasuk beta glucan dan inulin.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/cara-mengurangi-kolesterol-dengan-beta-glucan-dan-inulin" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips5.jpg') }}" alt="Pola Makan Vegetarian yang Sehat">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Pola Makan Vegetarian yang Sehat</h5>
-                    <p class="tips-item__description">Pola makan vegetarian memiliki banyak manfaat jika memperhatikan keseimbangan kandungan nutrisi dari setiap makanan yang dikonsumsi. Manfaat dari pola makan vegetarian yang sehat antara lain mengontrol berat badan, menjaga kadar kolesterol, dan menurunkan risiko penyakit jantung hingga diabetes tipe 2.</p>
+                    <p class="tips-item__description">Vegetarian bukan berarti tidak mengonsumsi daging dan produk hewani, seperti telur dan produk olahan susu. Pola makan vegetarian memiliki banyak manfaat jika memperhatikan keseimbangan kandungan nutrisi dari setiap makanan yang dikonsumsi, seperti mengontrol berat badan dan kadar kolesterol, menurunkan risiko penyakit jantung, dan diabetes tipe 2.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/pola-makan-vegetarian-yang-sehat" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat1.jpg') }}" alt="Manfaat Gula Merah bagi Penderita Diabetes">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Manfaat Gula Merah bagi Penderita Diabetes</h5>
-                    <p class="tips-item__description">Manfaat gula merah sebagai pemanis sudah sejak lama dikenal masyarakat. Lebih dari itu, gula merah juga dianggap lebih baik dikonsumsi bagi penderita diabetes daripada gula putih. Gula merah berasal dari nira pohon kelapa. Gula ini memiliki kandungan gizi yang baik bagi kesehatan, indeks glikemik (IG) gula merah juga lebih rendah dibandingkan dengan pemanis lainnya.</p>
+                    <p class="tips-item__description">Manfaat gula merah sebagai pemanis sudah lama dikenal masyarakat. Lebih dari itu, gula merah dianggap lebih baik dikonsumsi bagi penderita diabetes daripada gula putih. Gula merah berasal dari nira pohon kelapa dan memiliki kandungan gizi yang baik bagi kesehatan. Indeks glikemik (IG) gula merah juga lebih rendah dibandingkan dengan pemanis lainnya.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/Manfaat-Gula-Merah-VS-Gula-Putih-bagi-Penderita-Diabetes" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat2.jpg') }}" alt="Garam Lososa, Garam Rendah Sodium yang Lebih Sehat bagi Tubuh">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Garam Lososa, Garam Rendah Sodium yang Lebih Sehat bagi Tubuh</h5>
-                    <p class="tips-item__description">Garam lososa atau low sodium salt adalah jenis garam yang rendah natrium (sodium). Selain dapat menurunkan tekanan darah, masih ada manfaat garam lososa untuk kesehatan lainnya. Meski begitu, tidak semua orang dapat mengonsumsi jenis garam ini.</p>
+                    <p class="tips-item__description">Garam lososa atau <i>low sodium salt</i> adalah garam rendah natrium (sodium), sebagian kandungan sodiumnya diganti dengan kalium klorida (senyawa garam alami yang sering ditemukan di laut atau tanah). Salah satu manfaatnya ialah menurunkan tekanan darah. Namun, tidak semua orang dapat mengonsumsi garam ini.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/garam-lososa-garam-rendah-sodium-yang-lebih-sehat-bagi-tubuh" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
@@ -182,34 +189,39 @@
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Yoga untuk Pemula, Ketahui Manfaat dan Tips Melakukannya</h5>
                     <p class="tips-item__description">Yoga untuk pemula perlu dilakukan dengan mengikuti beberapa tips, termasuk memilih gerakan yang mudah dilakukan terlebih dahulu hingga tubuh terbiasa. Jika dilakukan dengan rutin dan benar, olahraga satu ini dapat mendatangkan banyak manfaat untuk kesehatan, salah satunya adalah menjaga kesehatan jantung.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/tidak-perlu-bertubuh-lentur-untuk-ikut-yoga" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat4.jpg') }}" alt="Minuman Isotonik, Teman yang Tepat Saat Berolahraga">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Minuman Isotonik, Teman yang Tepat Saat Berolahraga</h5>
-                    <p class="tips-item__description">Minuman isotonik merupakan salah satu jenis minuman yang kerap dikonsumsi saat berolahraga. Ini karena minuman isotonik dapat mengganti elektrolit yang hilang ketika seseorang banyak berkeringat. Selain itu, sebagian minuman isotonik juga mengandung gula yang dapat menjadi sumber energi tambahan.</p>
+                    <p class="tips-item__description">Minuman isotonik merupakan salah satu jenis minuman yang kerap dikonsumsi saat berolahraga. Ini karena minuman isotonik dapat mengganti elektrolit yang hilang ketika seseorang banyak berkeringat. Selain itu, sebagian minuman isotonik juga mengandung gula yang dapat menjadi sumber energi tambahan. Itulah sebabnya minuman isotonik sangat populer dikalangan para atlet atau olahragawan.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/minuman-isotonik-teman-yang-tepat-saat-berolahraga" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat5.jpg') }}" alt="7 Manfaat Mandi Air Hangat bagi Kesehatan">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">7 Manfaat Mandi Air Hangat bagi Kesehatan</h5>
-                    <p class="tips-item__description">Manfaat mandi air hangat tidak hanya untuk mengatasi dinginnya udara di pagi hari, tetapi juga dapat meredakan keluhan tertentu dan bahkan baik bagi kesehatan mental. Untuk tahu lebih jauh tentang manfaat mandi air hangat, simak pembahasannya di sini.</p>
+                    <p class="tips-item__description">Manfaat mandi air hangat tidak hanya untuk mengatasi dinginnya udara di pagi hari, tetapi juga dapat meredakan keluhan tertentu dan bahkan baik bagi kesehatan mental. Mandi air hangat juga dapat melancarkan peredaran darah. Anda akan merasa lebih rileks setelah mandi air hangat karena saat kulit bersentuhan dengan air hangat, tubuh akan melepaskan hormon endorfin, yaitu zat kimia yang dapat memberikan rasa nyaman dan bahagia.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/beragam-manfaat-mandi-air-hangat" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat6.jpg') }}" alt="Mengenal Daun Stevia, Pemanis Alami Pengganti Gula">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Mengenal Daun Stevia, Pemanis Alami Pengganti Gula</h5>
-                    <p class="tips-item__description">Daun stevia adalah pemanis alami pengganti gula yang digadang-gadang baik jika digunakan oleh penderita diabetes. Rasa manis yang dijadikan pengganti gula ini merupakan hasil ekstraksi glikosida steviol dari daun stevia.</p>
+                    <p class="tips-item__description">Daun stevia adalah pemanis alami pengganti gula yang digadang-gadang baik jika digunakan oleh penderita diabetes. Rasa manis yang dijadikan pengganti gula ini merupakan hasil ekstraksi glikosida steviol dari daun stevia yang diketahui 200-300 kali lebih manis dibanding gula pasir dan hampir tidak mengandung kalori. Namun, tetap perhatikan jumlah maksimal konsumsi hariannya supaya tetap aman digunakan.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/mengenal-daun-stevia-pemanis-alami-pengganti-gula" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
             <div class="tips-item">
                 <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat7.jpg') }}" alt="Ini Pentingnya Meluangkan Waktu Sendiri">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Ini Pentingnya Meluangkan Waktu Sendiri</h5>
-                    <p class="tips-item__description">Kata siapa, sih, meluangkan waktu sendiri itu membosankan dan tidak asyik? Nyatanya tidak demikian, kok. Menghabiskan waktu seorang diri justru memiliki banyak manfaat, lho, mulai dari menggali kreativitas hingga menumbuhkan rasa empati.</p>
+                    <p class="tips-item__description">Kata siapa, sih, meluangkan waktu sendiri itu membosankan dan tidak asyik? Menghabiskan waktu seorang diri justru memiliki banyak manfaat, mulai dari menggali kreativitas hingga menumbuhkan rasa empati. Meluangkan waktu sendiri berbeda dengan kesepian, ya. Waktu sendiri atau <i>me time</i> adalah keadaan di mana kamu menikmati momen sendiri dengan melakukan sesuatu yang kamu sukai.</p>
+                    <a class="read-more__btn" href="https://www.alodokter.com/ini-pentingnya-meluangkan-waktu-sendiri" target="_blank" rel="noopener noreferrer"><b>Baca Selengkapnya</b></a>
                 </div>
             </div>
         </div>
