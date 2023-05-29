@@ -26,10 +26,10 @@ class ControllerLogin extends BaseController
         $data = [
             'username' => $x->input('username'),
             'password' => $x->input('password'),
-            'role' => 'pengguna'
+            'role' => 'client'
         ];
         if (Auth::Attempt($data)) {
-            return redirect('index');
+            return redirect('berhasil');
         } else {
             return redirect('login')->with('error', 'Email atau password salah!!!');
         }
@@ -48,7 +48,7 @@ class ControllerLogin extends BaseController
             'name' => $data['name'],
             'sex' => $data['sex'],
             'date_of_birth' => $data['date_of_birth'],
-            'role' => 'pengguna'
+            'role' => 'client'
         ]);
         return redirect("login")
             ->withSuccess('Akun telah terbuat!!!');

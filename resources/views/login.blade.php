@@ -16,16 +16,20 @@
         </div>
         <div class="container">
             <h3>Login</h3>
-            <label for="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required>
 
-            <label for="password"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
-
-            <div class="buttons">
-                <button type="submit">Register</button>
-                <button type="submit">Login</button>
-            </div>
+            <form action="{{ url('actionlogin') }}" method="post">
+                {{ csrf_field() }}
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+    
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+    
+                <div class="buttons">
+                    <button type="button" name="register" onclick="window.location.href='http://localhost/Calculus/registrasi'">Register</button>
+                    <button type="submit" name="kirim" value="kirim">Login</button>
+                </div>
+            </form>
         </div>
     </form>
 </body>
