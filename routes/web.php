@@ -22,6 +22,11 @@ Route::get('/', function () {
 Route::get('login',[ControllerLogin::class, 'login']);
 Route::post('actionlogin',[ControllerLogin::class, 'actionlogin']);
 
+
+Route::get('/berhasil', function () {
+    return view('success');
+});
+
 //registrasi
 Route::get('registrasi',[ControllerLogin::class,'registrasi']);
 Route::post('postregistrasi',[ControllerLogin::class,'postregistrasi']);

@@ -16,31 +16,36 @@
         </div>
         <div class="container">
             <h3>Register</h3>
-            <label for="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <form action="{{ url('postregistrasi') }}" method="post">
+                {{ csrf_field() }}
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
 
-            <label for="email"><b>Email</b></label>
-            <input type="email" placeholder="Enter Email" name="email" required>
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required>
 
-            <label for="name"><b>Name</b></label>
-            <input type="text" placeholder="Enter Name" name="name" required>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter Name" name="name" required>
 
-            <label for="password"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
 
-            <label for="date_of_birth"><b>Date of Birth</b></label>
-            <input type="text" placeholder="Enter Date of Birth" name="date_of_birth" required>
+                <label for="date_of_birth"><b>Date of Birth</b></label>
+                <br>
+                <input type="date" placeholder="Enter Date of Birth" name="date_of_birth" required>
+                <br>
+                <br>
+                <label for="sex"><b>Sex</b></label><br>
+                <input type="radio" id="laki-laki" name="sex" value="laki-laki">
+                <label for="laki-laki">Laki-laki</label>
+                <input type="radio" id="perempuan" name="sex" value="perempuan">
+                <label for="perempuan">Perempuan</label>
 
-            <label for="sex"><b>Sex</b></label><br>
-            <input type="radio" name="sex">
-            <label for="laki-laki">Laki-laki</label>
-            <input type="radio" name="sex">
-            <label for="perempuan">Perempuan</label>
-
-            <div class="buttons">
-                <button type="submit">Back</button>
-                <button type="submit">Register</button>
-            </div>
+                <div class="buttons">
+                    <button type="submit">Back</button>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
         </div>
     </form>
 </body>

@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('profile_pic');
             $table->decimal('height', 4, 1);
             $table->decimal('weight', 4, 1);
+            $table->enum('role', ['client']);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
