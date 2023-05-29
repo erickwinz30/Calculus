@@ -26,6 +26,7 @@ class ControllerLogin extends BaseController
         $data = [
             'username' => $x->input('username'),
             'password' => $x->input('password'),
+            'role' => 'pengguna'
         ];
         if (Auth::Attempt($data)) {
             return redirect('index');
@@ -46,7 +47,8 @@ class ControllerLogin extends BaseController
             'password' => Hash::make($data['password']),
             'name' => $data['name'],
             'sex' => $data['sex'],
-            'date_of_birth' => $data['date_of_birth']
+            'date_of_birth' => $data['date_of_birth'],
+            'role' => 'pengguna'
         ]);
         return redirect("login")
             ->withSuccess('Akun telah terbuat!!!');
