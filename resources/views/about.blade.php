@@ -17,6 +17,7 @@
             <div class="container">
                 <a class="navbar-brand" href="home">
                     <img src="{{ asset('/public/img/logo.png') }}" alt="logo">
+
                 </a>
                 <ul class="nav nav-pills">
                     <li class="nav-item">

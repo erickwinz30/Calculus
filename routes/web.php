@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\ControllerAbout;
+use App\Http\Controllers\ControllerAccountInfo;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerLogin;
+use App\Http\Controllers\ControllerMainPage;
+use App\Http\Middleware\CheckRole;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +18,10 @@ use App\Http\Controllers\ControllerLogin;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('home', function () {
-    return view('main-page');
-});
+Route::get('main', [ControllerMainPage::class, 'mainPage']);
+// Route::middleware(['auth', CheckRole::class.':client'])->group(function () {
+//     Route::get('main', [ControllerMainPage::class, 'mainPage'])->name('main.page');
+// });
 
 Route::get('add-food', function () {
     return view('add-food');
@@ -34,9 +35,14 @@ Route::get('health-tips', function () {
     return view('healthtips');
 });
 
-Route::get('about', function () {
-    return view('about');
-});
+// Route::get('account/asset/public/img/logo.png', function () {
+//     return 
+// });
+
+Route::get('account/{username}', [ControllerAccountInfo::class, 'viewAccount']);
+Route::post('account/update', [ControllerAccountInfo::class, 'updateAccount']);
+Route::get('account/{username}', [ControllerAccountInfo::class, 'viewAccount']);
+Route::get('about', [ControllerAbout::class, 'aboutPage']);
 
 //login
 Route::get('login', [ControllerLogin::class, 'login']);
