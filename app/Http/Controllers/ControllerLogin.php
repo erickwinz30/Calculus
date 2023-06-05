@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -29,7 +30,7 @@ class ControllerLogin extends BaseController
             'role' => 'client'
         ];
         if (Auth::Attempt($data)) {
-            return redirect('berhasil');
+            return redirect('main');
         } else {
             return redirect('login')->with('error', 'Email atau password salah!!!');
         }

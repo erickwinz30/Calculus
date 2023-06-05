@@ -16,7 +16,7 @@
         <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand" href="">
-                    <img src="{{ asset('/public/img/logo.png') }}" alt="logo">
+                    <img src="{{ asset('public/img/logo.png') }}" alt="logo">
                 </a>
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
