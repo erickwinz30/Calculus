@@ -13,7 +13,7 @@
 <body>
     <form action="postregistrasi" method="post" id="register">
         <div class="imgcontainer">
-            <img src="{{ asset('/public/img/logo.png') }}" alt="Logo" class="logo">
+            <img src="{{ asset('/public/img/brand.png') }}" alt="Logo" class="logo">
         </div>
         <div class="container">
             <h3>Register</h3>

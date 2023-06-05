@@ -15,19 +15,22 @@
     <header>
         <nav class="navbar">
             <div class="container">
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="home">
                     <img src="{{ asset('/public/img/logo.png') }}" alt="logo">
                 </a>
-                <ul class="nav justify-content-end">
+                <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">Home</a>
+                        <a class="nav-link" href="home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="health-tips">Health Tips</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="aboutus">About Us</a>
+                        <a class="nav-link active" aria-current="page" href="about">About Us</a>
                     </li>
+                    <a class="avatar" href="">
+                        <img src="{{ asset('/public/img/avatar.png') }}" alt="Profile picture" />
+                    </a>
                 </ul>
             </div>
         </nav>
@@ -35,7 +38,7 @@
     <main>
         <h3 class="title">Tentang Kami</h3>
         <div class="about">
-            <img src="{{ asset('/public/img/logo.png') }}" alt="logo">
+            <img src="{{ asset('/public/img/brand.png') }}" alt="logo">
             <p>Kesehatan menjadi semakin penting dalam kehidupan sehari-hari. Banyak sekali kondisi yang muncul akibat dari ketidaktahuan kita dalam memenuhi kebutuhan kalori kita sehari-hari, terkadang kita mengkonsumsi kalori dalam jumlah yang berlebihan sehingga dapat menyebabkan berat badan tubuh bertambah. Selain itu, kalori yang berlebih dapat menimbulkan penyakit seperti diabetes, kolesterol, kurang kalori protein (KKP), marasmus, dan sebagainya. Pola makan yang sehat dapat membantu menjaga kesehatan dan berat badan ideal. Salah satu cara mengontrol pola makan adalah dengan menghitung kalori yang dikonsumsi setiap harinya. Namun, tidak semua orang memiliki pengetahuan dan kemampuan untuk menghitung kalori dengan benar. <br><br> Berdasarkan pernyataan di atas, kami ingin membuat suatu website yang menyediakan fitur agar pengguna/user bisa mengetahui jumlah kalori yang harus masuk ke dalam tubuh mereka dan sudah seberapa banyak kalori yang mereka konsumsi di hari itu. Selain itu, kami juga memberikan edukasi mengenai makanan yang sehat dan pola hidup sehat. Kami menyadari bahwa banyak orang kesulitan untuk menghitung kalori dan mengontrol pola makan mereka. Oleh karena itu, kami ingin membuat sebuah website yang user-friendly dan mudah digunakan oleh pengguna. Kami yakin bahwa website ini dapat membantu banyak orang untuk meningkatkan kesehatan mereka dan hidup lebih sehat. Website ini kami beri nama CalCuLus (Calorie Counter Love ur Self).</p>
         </div>
         <hr>

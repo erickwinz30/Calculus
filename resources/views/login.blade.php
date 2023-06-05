@@ -12,19 +12,18 @@
 <body>
     <form action="actionlogin" method="post" id="login">
         <div class="imgcontainer">
-            <img src="{{ asset('/public/img/logo.png') }}" alt="Logo" class="logo">
+            <img src="{{ asset('/public/img/brand.png') }}" alt="Logo" class="logo">
         </div>
         <div class="container">
             <h3>Login</h3>
-
             <form action="{{ url('actionlogin') }}" method="post">
                 {{ csrf_field() }}
                 <label for="username"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="username" required>
-    
+
                 <label for="password"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
-    
+
                 <div class="buttons">
                     <button type="button" name="register" onclick="window.location.href='http://localhost/Calculus/registrasi'">Register</button>
                     <button type="submit" name="kirim" value="kirim">Login</button>

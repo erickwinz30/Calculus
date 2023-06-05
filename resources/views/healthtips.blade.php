@@ -14,19 +14,22 @@
     <header>
         <nav class="navbar">
             <div class="container">
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="home">
                     <img src="{{ asset('/public/img/logo.png') }}" alt="logo">
                 </a>
-                <ul class="nav justify-content-end">
+                <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">Home</a>
+                        <a class="nav-link" href="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="health-tips">Health Tips</a>
+                        <a class="nav-link active" aria-current="page" href="health-tips">Health Tips</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="aboutus">About Us</a>
+                        <a class="nav-link" href="about">About Us</a>
                     </li>
+                    <a class="avatar" href="">
+                        <img src="{{ asset('/public/img/avatar.png') }}" alt="Profile picture" />
+                    </a>
                 </ul>
             </div>
         </nav>
