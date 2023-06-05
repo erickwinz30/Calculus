@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="stylesheet" href="asset/public/css/main-page.css" />
+  <link rel="stylesheet" href="{{ asset( 'public/css/main-page.css' ) }}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <title>Calculus | Home Page</title>
 </head>
@@ -16,7 +16,7 @@
     <nav class="navbar">
       <div class="container">
         <a class="navbar-brand" href="">
-          <img src="asset/public/img/logo.png" alt="logo" />
+          <img src="{{ asset('public/img/logo.png') }}" alt="logo" />
         </a>
         <ul class="nav justify-content-end">
           <li class="nav-item">
@@ -29,7 +29,7 @@
             <a class="nav-link" href="aboutus">About Us</a>
           </li>
           <a href="">
-            <img src="" alt="profile-img" />
+            <img src="{{ asset('public/profilePic/erickwinz30-jiwoni.jpg') }}" alt=""/>
           </a>
         </ul>
       </div>
@@ -74,7 +74,7 @@
               <img class="btn-img" src="asset/public/img/add-button.png" alt="tambah" />
             </a>
           </div>
-          <table class="table">
+          <table class="table_breakfast">
             <tr>
               <td>Indomie Goreng</td>
               <td>200g</td>
@@ -95,7 +95,7 @@
               <img class="btn-img" src="asset/public/img/add-button.png" alt="tambah" />
             </a>
           </div>
-          <table class="table">
+          <table class="table_lunch">
             <tr>
               <td>Indomie Goreng</td>
               <td>200g</td>
@@ -111,7 +111,7 @@
 
     <aside>
       <div class="card nutrition">
-        <li>today nutrition</li>
+        <li>Today nutrition</li>
         <table class="table">
           <tr>
             <td>fat</td>
