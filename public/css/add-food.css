@@ -57,56 +57,49 @@ main {
     color: #76DFB7;
 }
 
-.about {
-    display: flex;
-    flex-direction: row;
+.instruction {
+    color: red;
 }
 
-.about img {
-    width: 350px;
-    height: 350px;
-    margin-right: 20px;
+#add-food {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
 }
 
-.about p {
-    text-align: justify;
+form {
+    width: 50%;
+    height: 50%;
+    margin-top: 50px;
 }
 
-.founders {
-    margin: 10px;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+.btn-cancel {
+    background-color: #FF0404;
+    color: black;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.card {
-    width: 16rem;
-    padding: 10px;
-    margin: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    overflow: hidden;
+.btn-save {
+    background-color: #76DFB7;
+    color: black;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.card li {
-    display: inline-block;
-    margin: 0 1.2em;
-}
-
-.card img {
-    height: 300px;
-}
-
-.card-body {
-    text-align: center;
-}
-
-.card-body p {
-    font-size: 14px;
+.btn:hover {
+    opacity: 0.8;
 }
 
 footer {
+    position: absolute;
     width: 100%;
+    bottom: 0;
     padding: 5px;
     font-size: 16px;
     background-color: #76DFB7;

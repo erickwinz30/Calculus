@@ -14,11 +14,10 @@
 <body>
     <form action="actionlogin" method="post" id="login">
         <div class="imgcontainer">
-            <img src="{{ asset('/public/img/logo.png') }}" alt="Logo" class="logo">
+            <img src="{{ asset('/public/img/brand.png') }}" alt="Logo" class="logo">
         </div>
         <div class="container">
             <h3>Login</h3>
-
             <form action="{{ url('actionlogin') }}" method="post">
                 {{ csrf_field() }}
                 @if (session('error'))

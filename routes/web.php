@@ -23,6 +23,18 @@ Route::get('main', [ControllerMainPage::class, 'mainPage']);
 //     Route::get('main', [ControllerMainPage::class, 'mainPage'])->name('main.page');
 // });
 
+Route::get('add-food', function () {
+    return view('add-food');
+});
+
+Route::get('nutrition-info', function () {
+    return view('nutrition-info');
+});
+
+Route::get('health-tips', function () {
+    return view('healthtips');
+});
+
 // Route::get('account/asset/public/img/logo.png', function () {
 //     return 
 // });
@@ -33,8 +45,8 @@ Route::get('account/{username}', [ControllerAccountInfo::class, 'viewAccount']);
 Route::get('about', [ControllerAbout::class, 'aboutPage']);
 
 //login
-Route::get('login',[ControllerLogin::class, 'login']);
-Route::post('actionlogin',[ControllerLogin::class, 'actionlogin']);
+Route::get('login', [ControllerLogin::class, 'login']);
+Route::post('actionlogin', [ControllerLogin::class, 'actionlogin']);
 
 
 Route::get('/berhasil', function () {
@@ -42,5 +54,5 @@ Route::get('/berhasil', function () {
 });
 
 //registrasi
-Route::get('registrasi',[ControllerLogin::class,'registrasi']);
-Route::post('postregistrasi',[ControllerLogin::class,'postregistrasi']);
+Route::get('registrasi', [ControllerLogin::class, 'registrasi']);
+Route::post('postregistrasi', [ControllerLogin::class, 'postregistrasi']);
