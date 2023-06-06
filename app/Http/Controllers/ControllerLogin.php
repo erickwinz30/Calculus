@@ -30,7 +30,7 @@ class ControllerLogin extends BaseController
             'role' => 'client'
         ];
         if (Auth::Attempt($data)) {
-            return redirect('main');
+            return redirect('home');
         } else {
             return redirect('login')->with('error', 'Email atau password salah!!!');
         }

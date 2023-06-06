@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ModelMainPage extends Model
@@ -11,7 +12,7 @@ class ModelMainPage extends Model
     use HasFactory;
 
     public function readBreakfast() {
-        $breakfast = DB::table('breakfast')->where()->get();
+        $breakfast = DB::table('breakfast')->where(Auth::user()->username)->get();
         return $breakfast;
     }
 

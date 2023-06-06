@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('/public/css/tips.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/tips.css') }}">
     <title>Calculus | Health Tips</title>
 </head>
 
@@ -15,7 +15,7 @@
         <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand" href="home">
-                    <img src="{{ asset('/public/img/logo.png') }}" alt="logo">
+                    <img src="{{ asset('img/logo.png') }}" alt="logo">
                 </a>
                 <ul class="nav nav-pills">
                     <li class="nav-item">
@@ -28,7 +28,7 @@
                         <a class="nav-link" href="about">About Us</a>
                     </li>
                     <a class="avatar" href="">
-                        <img src="{{ asset('/public/img/avatar.png') }}" alt="Profile picture" />
+                        <img src="{{ asset('img/avatar.png') }}" alt="Profile picture" />
                     </a>
                 </ul>
             </div>
@@ -132,7 +132,7 @@
         <h3 class="title">Health Tips</h3>
         <div class="tips">
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips1.jpg') }}" alt="Tips Pola Makan untuk Diet Sehat">
+                <img class="tips-item__thumbnail" src="{{ asset('img/tips1.jpg') }}" alt="Tips Pola Makan untuk Diet Sehat">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Tips Pola Makan untuk Diet Sehat</h5>
                     <p class="tips-item__description">Diet kerap digunakan sebagai cara untuk mendapatkan berat badan ideal. Namun, pola makan untuk diet sehat bukan dengan melewatkan waktu makan. Kunci diet sehat adalah menyeimbangkan jumlah kalori yang dikonsumsi dengan yang dikeluarkan dan memenuhi kebutuhan nutrisi tubuh, seperti protein, karbohidrat, lemak, serta aneka vitamin dan mineral.</p>
@@ -140,7 +140,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips2.jpg') }}" alt="Ingin Diet Alami Tanpa Obat, Ini Tipsnya">
+                <img class="tips-item__thumbnail" src="{{ asset('img/tips2.jpg') }}" alt="Ingin Diet Alami Tanpa Obat, Ini Tipsnya">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Ingin Diet Alami Tanpa Obat, Ini Tipsnya</h5>
                     <p class="tips-item__description">Daripada menjalani program diet instan yang berisiko, kamu bisa mencoba diet alami tanpa obat untuk mendapatkan bentuk tubuh yang diimpikan. Selain lebih aman, diet alami tanpa obat dapat memberikan sejumlah manfaat lain untuk kesehatan, misalnya kamu dapat mencapai berat badan ideal yang ditargetkan serta mendapatkan bentuk tubuh langsing dan sehat.</p>
@@ -148,7 +148,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips3.jpg') }}" alt="Tips Diet Rendah Garam yang Aman dan Tepat">
+                <img class="tips-item__thumbnail" src="{{ asset('img/tips3.jpg') }}" alt="Tips Diet Rendah Garam yang Aman dan Tepat">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Tips Diet Rendah Garam yang Aman dan Tepat</h5>
                     <p class="tips-item__description">Diet rendah garam disarankan untuk penderita gagal jantung atau tekanan darah tinggi. Pola makan ini dapat membantu mengendalikan penyakit tersebut. Namun, cara melakukan diet ini harus tepat, agar kadar garam (natrium) dalam tubuh tetap seimbang dan manfaat pola makan ini benar-benar optimal.</p>
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips4.jpg') }}" alt="Cara Mengurangi Kolesterol dengan Beta Glucan dan Inulin">
+                <img class="tips-item__thumbnail" src="{{ asset('img/tips4.jpg') }}" alt="Cara Mengurangi Kolesterol dengan Beta Glucan dan Inulin">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Cara Mengurangi Kolesterol dengan Beta Glucan dan Inulin</h5>
                     <p class="tips-item__description">Kadar kolesterol yang terlalu tinggi dan tidak terkontrol bisa menimbulkan masalah kesehatan, mulai dari stroke hingga serangan jantung yang terkadang tidak menimbulkan gejala. Salah satu cara menurunkan kolesterol tinggi adalah dengan mengonsumsi makanan yang kaya serat, termasuk beta glucan dan inulin.</p>
@@ -164,7 +164,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/tips5.jpg') }}" alt="Pola Makan Vegetarian yang Sehat">
+                <img class="tips-item__thumbnail" src="{{ asset('img/tips5.jpg') }}" alt="Pola Makan Vegetarian yang Sehat">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Pola Makan Vegetarian yang Sehat</h5>
                     <p class="tips-item__description">Vegetarian bukan berarti tidak mengonsumsi daging dan produk hewani, seperti telur dan produk olahan susu. Pola makan vegetarian memiliki banyak manfaat jika memperhatikan keseimbangan kandungan nutrisi dari setiap makanan yang dikonsumsi, seperti mengontrol berat badan dan kadar kolesterol, menurunkan risiko penyakit jantung, dan diabetes tipe 2.</p>
@@ -172,7 +172,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat1.jpg') }}" alt="Manfaat Gula Merah bagi Penderita Diabetes">
+                <img class="tips-item__thumbnail" src="{{ asset('img/manfaat1.jpg') }}" alt="Manfaat Gula Merah bagi Penderita Diabetes">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Manfaat Gula Merah bagi Penderita Diabetes</h5>
                     <p class="tips-item__description">Manfaat gula merah sebagai pemanis sudah lama dikenal masyarakat. Lebih dari itu, gula merah dianggap lebih baik dikonsumsi bagi penderita diabetes daripada gula putih. Gula merah berasal dari nira pohon kelapa dan memiliki kandungan gizi yang baik bagi kesehatan. Indeks glikemik (IG) gula merah juga lebih rendah dibandingkan dengan pemanis lainnya.</p>
@@ -180,7 +180,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat2.jpg') }}" alt="Garam Lososa, Garam Rendah Sodium yang Lebih Sehat bagi Tubuh">
+                <img class="tips-item__thumbnail" src="{{ asset('img/manfaat2.jpg') }}" alt="Garam Lososa, Garam Rendah Sodium yang Lebih Sehat bagi Tubuh">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Garam Lososa, Garam Rendah Sodium yang Lebih Sehat bagi Tubuh</h5>
                     <p class="tips-item__description">Garam lososa atau <i>low sodium salt</i> adalah garam rendah natrium (sodium), sebagian kandungan sodiumnya diganti dengan kalium klorida (senyawa garam alami yang sering ditemukan di laut atau tanah). Salah satu manfaatnya ialah menurunkan tekanan darah. Namun, tidak semua orang dapat mengonsumsi garam ini.</p>
@@ -188,7 +188,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat3.jpg') }}" alt="Yoga untuk Pemula, Ketahui Manfaat dan Tips Melakukannya">
+                <img class="tips-item__thumbnail" src="{{ asset('img/manfaat3.jpg') }}" alt="Yoga untuk Pemula, Ketahui Manfaat dan Tips Melakukannya">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Yoga untuk Pemula, Ketahui Manfaat dan Tips Melakukannya</h5>
                     <p class="tips-item__description">Yoga untuk pemula perlu dilakukan dengan mengikuti beberapa tips, termasuk memilih gerakan yang mudah dilakukan terlebih dahulu hingga tubuh terbiasa. Jika dilakukan dengan rutin dan benar, olahraga satu ini dapat mendatangkan banyak manfaat untuk kesehatan, salah satunya adalah menjaga kesehatan jantung.</p>
@@ -196,7 +196,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat4.jpg') }}" alt="Minuman Isotonik, Teman yang Tepat Saat Berolahraga">
+                <img class="tips-item__thumbnail" src="{{ asset('img/manfaat4.jpg') }}" alt="Minuman Isotonik, Teman yang Tepat Saat Berolahraga">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Minuman Isotonik, Teman yang Tepat Saat Berolahraga</h5>
                     <p class="tips-item__description">Minuman isotonik merupakan salah satu jenis minuman yang kerap dikonsumsi saat berolahraga. Ini karena minuman isotonik dapat mengganti elektrolit yang hilang ketika seseorang banyak berkeringat. Selain itu, sebagian minuman isotonik juga mengandung gula yang dapat menjadi sumber energi tambahan. Itulah sebabnya minuman isotonik sangat populer dikalangan para atlet atau olahragawan.</p>
@@ -204,7 +204,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat5.jpg') }}" alt="7 Manfaat Mandi Air Hangat bagi Kesehatan">
+                <img class="tips-item__thumbnail" src="{{ asset('img/manfaat5.jpg') }}" alt="7 Manfaat Mandi Air Hangat bagi Kesehatan">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">7 Manfaat Mandi Air Hangat bagi Kesehatan</h5>
                     <p class="tips-item__description">Manfaat mandi air hangat tidak hanya untuk mengatasi dinginnya udara di pagi hari, tetapi juga dapat meredakan keluhan tertentu dan bahkan baik bagi kesehatan mental. Mandi air hangat juga dapat melancarkan peredaran darah. Anda akan merasa lebih rileks setelah mandi air hangat karena saat kulit bersentuhan dengan air hangat, tubuh akan melepaskan hormon endorfin, yaitu zat kimia yang dapat memberikan rasa nyaman dan bahagia.</p>
@@ -212,7 +212,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat6.jpg') }}" alt="Mengenal Daun Stevia, Pemanis Alami Pengganti Gula">
+                <img class="tips-item__thumbnail" src="{{ asset('img/manfaat6.jpg') }}" alt="Mengenal Daun Stevia, Pemanis Alami Pengganti Gula">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Mengenal Daun Stevia, Pemanis Alami Pengganti Gula</h5>
                     <p class="tips-item__description">Daun stevia adalah pemanis alami pengganti gula yang digadang-gadang baik jika digunakan oleh penderita diabetes. Rasa manis yang dijadikan pengganti gula ini merupakan hasil ekstraksi glikosida steviol dari daun stevia yang diketahui 200-300 kali lebih manis dibanding gula pasir dan hampir tidak mengandung kalori. Namun, tetap perhatikan jumlah maksimal konsumsi hariannya supaya tetap aman digunakan.</p>
@@ -220,7 +220,7 @@
                 </div>
             </div>
             <div class="tips-item">
-                <img class="tips-item__thumbnail" src="{{ asset('/public/img/manfaat7.jpg') }}" alt="Ini Pentingnya Meluangkan Waktu Sendiri">
+                <img class="tips-item__thumbnail" src="{{ asset('img/manfaat7.jpg') }}" alt="Ini Pentingnya Meluangkan Waktu Sendiri">
                 <div class="tips-item__content">
                     <h5 class="tips-item__title">Ini Pentingnya Meluangkan Waktu Sendiri</h5>
                     <p class="tips-item__description">Kata siapa, sih, meluangkan waktu sendiri itu membosankan dan tidak asyik? Menghabiskan waktu seorang diri justru memiliki banyak manfaat, mulai dari menggali kreativitas hingga menumbuhkan rasa empati. Meluangkan waktu sendiri berbeda dengan kesepian, ya. Waktu sendiri atau <i>me time</i> adalah keadaan di mana kamu menikmati momen sendiri dengan melakukan sesuatu yang kamu sukai.</p>
