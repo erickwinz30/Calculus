@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('/public/css/about.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Calculus | About Us</title>
 </head>
@@ -16,7 +16,7 @@
         <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand" href="home">
-                    <img src="{{ asset('/public/img/logo.png') }}" alt="logo">
+                    <img src="{{ asset('img/logo.png') }}" alt="logo">
 
                 </a>
                 <ul class="nav nav-pills">
@@ -30,7 +30,7 @@
                         <a class="nav-link active" aria-current="page" href="about">About Us</a>
                     </li>
                     <a class="avatar" href="">
-                        <img src="{{ asset('/public/img/avatar.png') }}" alt="Profile picture" />
+                        <img src="{{ asset('img/avatar.png') }}" alt="Profile picture" />
                     </a>
                 </ul>
             </div>
@@ -39,14 +39,14 @@
     <main>
         <h3 class="title">Tentang Kami</h3>
         <div class="about">
-            <img src="{{ asset('/public/img/brand.png') }}" alt="logo">
+            <img src="{{ asset('img/logo.png') }}" alt="logo">
             <p>Kesehatan menjadi semakin penting dalam kehidupan sehari-hari. Banyak sekali kondisi yang muncul akibat dari ketidaktahuan kita dalam memenuhi kebutuhan kalori kita sehari-hari, terkadang kita mengkonsumsi kalori dalam jumlah yang berlebihan sehingga dapat menyebabkan berat badan tubuh bertambah. Selain itu, kalori yang berlebih dapat menimbulkan penyakit seperti diabetes, kolesterol, kurang kalori protein (KKP), marasmus, dan sebagainya. Pola makan yang sehat dapat membantu menjaga kesehatan dan berat badan ideal. Salah satu cara mengontrol pola makan adalah dengan menghitung kalori yang dikonsumsi setiap harinya. Namun, tidak semua orang memiliki pengetahuan dan kemampuan untuk menghitung kalori dengan benar. <br><br> Berdasarkan pernyataan di atas, kami ingin membuat suatu website yang menyediakan fitur agar pengguna/user bisa mengetahui jumlah kalori yang harus masuk ke dalam tubuh mereka dan sudah seberapa banyak kalori yang mereka konsumsi di hari itu. Selain itu, kami juga memberikan edukasi mengenai makanan yang sehat dan pola hidup sehat. Kami menyadari bahwa banyak orang kesulitan untuk menghitung kalori dan mengontrol pola makan mereka. Oleh karena itu, kami ingin membuat sebuah website yang user-friendly dan mudah digunakan oleh pengguna. Kami yakin bahwa website ini dapat membantu banyak orang untuk meningkatkan kesehatan mereka dan hidup lebih sehat. Website ini kami beri nama CalCuLus (Calorie Counter Love ur Self).</p>
         </div>
         <hr>
         <h3 class="title">Founders</h3>
         <div class="founders">
             <div class="card">
-                <img src="{{ asset('/public/img/erick.jpg') }}" class="card-img-top" alt="Erick Winata">
+                <img src="{{ asset('img/erick.jpg') }}" class="card-img-top" alt="Erick Winata">
                 <div class="card-body">
                     <h6>Erick Winata</h6><br>
                     <p>
@@ -62,7 +62,7 @@
                 </ul>
             </div>
             <div class="card">
-                <img src="{{ asset('/public/img/fariz.jpeg') }}" class="card-img-top" alt="Fariz Purnama Aji">
+                <img src="{{ asset('img/fariz.jpeg') }}" class="card-img-top" alt="Fariz Purnama Aji">
                 <div class="card-body">
                     <h6>Fariz Purnama Aji</h6><br>
                     <p>
@@ -78,7 +78,7 @@
                 </ul>
             </div>
             <div class="card">
-                <img src="{{ asset('/public/img/bilal.jpeg') }}" class="card-img-top" alt="Muhammad Bilal Al-Asy'ari">
+                <img src="{{ asset('img/bilal.jpeg') }}" class="card-img-top" alt="Muhammad Bilal Al-Asy'ari">
                 <div class="card-body">
                     <h6>Muhammad Bilal Al-Asy'ari</h6><br>
                     <p>
@@ -94,7 +94,7 @@
                 </ul>
             </div>
             <div class="card">
-                <img src="{{ asset('/public/img/siti.jpg') }}" class="card-img-top" alt="Siti Khoiriati">
+                <img src="{{ asset('img/siti.jpg') }}" class="card-img-top" alt="Siti Khoiriati">
                 <div class="card-body">
                     <h6>Siti Khoiriati</h6><br>
                     <p>

@@ -18,14 +18,22 @@ use App\Http\Middleware\CheckRole;
 |
 */
 
-Route::get('main', [ControllerMainPage::class, 'mainPage']);
+Route::group(['middleware' => ['checkRole:client']], function () {
+    Route::get('/', [ControllerMainPage::class, 'mainPage']);
+    Route::get('home', [ControllerMainPage::class, 'mainPage']);
+    Route::get('add-food', function () {
+        return view('add-food');
+    });
+    Route::get('account/{username}', [ControllerAccountInfo::class, 'viewAccount']);
+    Route::post('account/update', [ControllerAccountInfo::class, 'updateAccount']);
+    Route::get('account/{username}', [ControllerAccountInfo::class, 'viewAccount']);
+    Route::get('about', [ControllerAbout::class, 'aboutPage']);
+});
+
+
 // Route::middleware(['auth', CheckRole::class.':client'])->group(function () {
 //     Route::get('main', [ControllerMainPage::class, 'mainPage'])->name('main.page');
 // });
-
-Route::get('add-food', function () {
-    return view('add-food');
-});
 
 Route::get('nutrition-info', function () {
     return view('nutrition-info');

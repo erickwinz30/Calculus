@@ -41,7 +41,7 @@
             <section class="card">
                 <div class="row">
                     <div class="col-auto">
-                        <img class="profile-photo" src="{{ asset('public/profilePic/erickwinz30-jiwoni.jpg') }}" alt="foto profile">
+                        <img class="profile-photo" src="{{ asset('public/profilePic/'.Auth::user()->username.'-'.Auth::user()->profilePic.') }}" alt="foto profile">
                     </div>
                     <div class="col">
                         @foreach ($account as $row)
