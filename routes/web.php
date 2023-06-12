@@ -26,9 +26,17 @@ Route::group(['middleware' => ['checkRole:client']], function () {
 
     //list-food
     Route::get('add-food', function () {
-        return view('add-food');
+        return view('add-food', [
+            'title' => 'Add Food'
+        ]);
     });
     Route::post('add-food/add', [ControllerFood::class, 'addListFood']);
+
+    Route::get('add-calorie', function () {
+        return view('add-calorie-page', [
+            'title' => 'Add Calorie'
+        ]);
+    });
 
     //account
     Route::get('account', [ControllerAccountInfo::class, 'viewAccount']);
@@ -37,17 +45,23 @@ Route::group(['middleware' => ['checkRole:client']], function () {
     //aboutus
     Route::get('aboutus', [ControllerAbout::class, 'aboutPage']);
 
-    Route::get('height-weight', function () {
-        return view('height-weight');
+    Route::get('change-height-weight', function () {
+        return view('change-height-weight', [
+            'title' => 'Change Height Weight'
+        ]);
     });
     Route::post('height-weight/run', [ControllerAccountInfo::class, 'bmr']);
 
     Route::get('nutrition-info', function () {
-        return view('nutrition-info');
+        return view('nutrition-info', [
+            'title' => 'Nutrition Information'
+        ]);
     });
     
     Route::get('health-tips', function () {
-        return view('healthtips');
+        return view('healthtips', [
+            'title' => 'Health Tips'
+        ]);
     });
 });
 

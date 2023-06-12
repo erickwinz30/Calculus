@@ -13,10 +13,10 @@
                 <a class="nav-link {{ ($title === 'Health Tips') ? 'active' : '' }}" href="health-tips">Health Tips</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ ($title === 'About Us') ? 'active' : '' }}" href="about">About Us</a>
+                <a class="nav-link {{ ($title === 'About Us') ? 'active' : '' }}" href="aboutus">About Us</a>
             </li>
-            <a class="avatar" href="">
-                <img src="{{ asset('profilePic/erickwinz30-jiwoni.jpg') }}" alt="Profile picture" />
+            <a class="avatar" href="account">
+                <img src="{{ asset('profilePic/'.Auth::user()->profile_pic) }}" alt="Profile picture" />
             </a>
         </ul>
     </div>

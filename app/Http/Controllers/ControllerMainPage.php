@@ -20,8 +20,9 @@ class ControllerMainPage extends BaseController
         $dinner['dinner'] = $xx->readDinner();
         $snack['snack'] = $xx->readSnack();
         $totalNutrition['totalNutrition'] = $xx->readNutrition();
+        $title['title'] = 'Home';
 
-        $allCalories = array_merge($breakfast, $lunch, $dinner, $snack, $totalNutrition);
+        $allCalories = array_merge($breakfast, $lunch, $dinner, $snack, $totalNutrition, $title);
 
         return view('main-page', $allCalories);
     }
