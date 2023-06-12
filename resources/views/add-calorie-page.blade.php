@@ -55,7 +55,8 @@
                             </h2>
                         </td>
                         <td class="td-input-main">
-                            <h2 class="input-data-list" data-gram="" data-calorie=""> 50gr 400Cals </h2>
+                            <h2 class="input-data-gram" data-gram="50gr">50gr</h2>
+                            <h2 class="input-data-calorie" data-calorie="400Cals">400Cals</h2>
                         </td>
                     </tr>
                 </table>
@@ -87,9 +88,11 @@
             const calorieSummaryList = document.querySelector('#calorie-summary-list');
             const foodList = document.querySelector('#food-list');
 
-            const foodButtons = document.querySelector('.food-btn');
+            const foodButtons = document.querySelectorAll('.food-btn');
             foodButtons.forEach((foodButton) => {
                 foodButton.addEventListener('click', function(){
+                    console.log(foodButton.parentElement);
+
                     const foodName = foodButton.parentElement.dataset.name;
                     const foodGram = foodButton.parentElement.dataset.gram;
                     const foodCalorie = foodButton.parentElement.dataset.calorie;
@@ -97,27 +100,33 @@
                     const calorieSummaryItem = `
                         <tr class="tr-aside">
                             <td>
-                                <h2 class="input" id="input-name">${foodName}</h2>
+                                <h2 class="input-name-add" id="input-name">${foodName}</h2>
                             </td>
-                            <td class="td-button-delete">
-                            <h2 class="input" id="input-gram">${foodGram}</h2>
-                            <h2 class="input" id="input-calorie">${foodGram}</h2>
-                            <button class="delete-button">Delete</button>
+                            <td class="td-add">
+                                <h2 class="input-gram" id="input-gram">${foodGram}</h2>
+                                <h2 class="input-calorie" id="input-calorie">${foodCalorie}</h2>
+                                <button class="delete-button">Delete</button>
                             </td>
                         </tr>
                     `;
     
                     calorieSummaryList.innerHTML += calorieSummaryItem;
+
+                    const deleteButtons = document.querySelectorAll('.delete-button');
+                    console.log(deleteButtons)
+              
+                    deleteButtons.forEach((button) => {
+                        button.addEventListener('click', function() {
+                            const row = button.closest('.tr-aside');
+                            deleteRow(row);
+                        });
+                    });
                 });
             });
 
-            const deleteButtons = document.querySelectorAll('.delete-button');
-            deleteButtons.forEach((deleteButton) => {
-                deleteButton.addEventListener('click', function() {
-                    const row = deleteButton.closest('.tr-aside');
-                    row.remove();
-                });
-            });
+            function deleteRow(row) {
+                row.remove();
+            }; 
         });
     </script>
 </body>
