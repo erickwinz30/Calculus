@@ -7,32 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/tips.css') }}">
-    <title>Calculus | Health Tips</title>
+    <title>Calculus | {{ $title }}</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="home">
-                    <img src="{{ asset('img/logo.png') }}" alt="logo">
-                </a>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link" href="home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="health-tips">Health Tips</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus">About Us</a>
-                    </li>
-                    <a class="avatar" href="account">
-                        <img src="{{ asset('img/avatar.png') }}" alt="Profile picture" />
-                    </a>
-                </ul>
-            </div>
-        </nav>
+        @include('layouts.navbar')
     </header>
     <main>
         <h3 class="title">Calorie Information</h3>

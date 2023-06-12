@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
 * {
   padding: 0;
   margin: 0;
@@ -7,12 +8,13 @@
 }
 
 body,
-html{
+html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
+
 main {
   width: 100%;
   height: auto;
@@ -27,9 +29,10 @@ search-bar {
   grid-column: 1/2;
   width: 100%;
 }
+
 aside {
   display: grid;
-  
+
   grid-column: 2/3;
   align-content: stretch;
   align-items: start;
@@ -37,9 +40,10 @@ aside {
   width: 50%;
   height: auto;
 }
-div-list{
+
+div-list {
   display: grid;
-  
+
   grid-column: 1;
   align-content: space-evenly;
   margin: 5px 5px 5px 0;
@@ -87,14 +91,14 @@ div-list{
   height: 40px;
   top: 181px;
   margin: 0px 0px 0px 20px;
-  
+
   background: #F9F9F9;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
-.search-container > input {
-  
+.search-container>input {
+
   height: 100%;
   width: 75%;
   padding: 16px;
@@ -105,8 +109,8 @@ div-list{
   border-radius: 10px;
 }
 
-.search-container > button {
-  
+.search-container>button {
+
   width: 20%;
   cursor: pointer;
   margin-left: auto;
@@ -119,7 +123,7 @@ div-list{
 }
 
 /* Main Tabel List */
-.main{
+.main {
   display: grid;
   justify-content: start;
   width: 600px;
@@ -131,57 +135,68 @@ div-list{
   overflow: hidden;
   font-family: Inter, sans-serif;
 }
-.input-name-list{
+
+.input-name-list {
   display: flex;
   font-size: 15px;
 }
-.table-main{
+
+.table-main {
   width: 550px;
 }
-.tr-main{
+
+.tr-main {
   height: 10px;
   width: 100%;
   padding: 16px;
 }
-td{
+
+td {
   height: 10px;
   width: 50px;
-  
+
 }
-.td-input-main{
+
+.td-input-main {
   text-align: right;
   width: 10px;
 }
-.input-data-list{
+
+.input-data-list {
   font-size: 15px;
   text-align: right;
 }
-.td-button-i{
+
+.td-button-i {
   text-align: center;
   padding: 0;
   width: 10px;
 }
-td .input{
+
+td .input {
   width: 50px;
   border-radius: 10px;
 }
-.bi{
+
+.bi {
   fill: #76DFB7;
 }
-.food-btn{
+
+.food-btn {
   border: 1px;
   border-radius: 50px;
   margin: 1px;
   padding: none;
   background-color: white;
 }
-i{
+
+i {
   width: 30px;
   height: 30px;
 }
 
 /* Sidebar List/Summary*/
-.sidebar{
+.sidebar {
   display: grid;
   justify-items: center;
   width: 600px;
@@ -193,68 +208,70 @@ i{
   overflow: hidden;
   font-family: Inter, sans-serif;
 }
-.calorie-summary{
+
+.calorie-summary {
   text-align: center;
 }
-  .table-aside{
-    
-    width: 100%;
-  }
-  .tr-aside{
-    height: 10px;
-    width: 100%;
-    padding: 16px;
-  }
-  td{
-    height: 10px;
-    width: 50px;
-    
-  }
-  .td-input-aside{
-    text-align: right;
-    width: 10px;
-  }
-  .td-button-delete{
-    text-align: right;
-    padding: 0;
-    width: 10px;
-  }
-  td .input{
-    width: 50px;
-    border-radius: 10px;
-  }
-  .delete-button{
-    width: 80px;
-    height: 30px;
-    margin: 0;
-    place-content: center;
-    font-size: 15px;
-    background-color: #FF0404;
-    border-radius: 10px;
-    border: 1px;
-  }
-  .add{
-    width: 60px;
-    height: 30px;
-    display: flex;
-    align-content: space-around;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    border: 1px;
-  }
-h2{
+
+.table-aside {
+
+  width: 100%;
+}
+
+.tr-aside {
+  height: 10px;
+  width: 100%;
+  padding: 16px;
+}
+
+td {
+  height: 10px;
+  width: 50px;
+
+}
+
+.td-input-aside {
+  text-align: right;
+  width: 10px;
+}
+
+.td-button-delete {
+  text-align: right;
+  padding: 0;
+  width: 10px;
+}
+
+td .input {
+  width: 50px;
+  border-radius: 10px;
+}
+
+.delete-button {
+  width: 80px;
+  height: 30px;
+  margin: 0;
+  place-content: center;
+  font-size: 15px;
+  background-color: #FF0404;
+  border-radius: 10px;
+  border: 1px;
+}
+
+.add {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  align-content: space-around;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px;
+}
+
+h2 {
   text-align: left;
 }
-.input{
+
+.input {
   font-size: 20px;
-}
-  /* Footer */
-  footer  {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    background-color: #76DFB7;
-    text-align: center;
-    color: white;
 }

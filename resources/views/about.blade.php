@@ -8,33 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Calculus | About Us</title>
+    <title>Calculus | {{ $title }}</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="home">
-                    <img src="{{ asset('img/logo.png') }}" alt="logo">
-
-                </a>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link" href="home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="health-tips">Health Tips</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="about">About Us</a>
-                    </li>
-                    <a class="avatar" href="account">
-                        <img src="{{ asset('img/avatar.png') }}" alt="Profile picture" />
-                    </a>
-                </ul>
-            </div>
-        </nav>
+        @include('layouts.navbar')
     </header>
     <main>
         <h3 class="title">Tentang Kami</h3>
@@ -72,7 +51,7 @@
                     </p>
                 </div>
                 <ul>
-                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://linkedin.com/in/farizpa"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li><a href="https://github.com/Farchar"><i class="fa-brands fa-github"></i></a></li>
                     <li><a href="https://www.instagram.com/farizp.a/"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>

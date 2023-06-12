@@ -12,7 +12,7 @@ use Illuminate\Routing\Controller as BaseController;
 class ControllerMainPage extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
+  
     public function mainPage() {
         $xx = new ModelMainPage();
         $breakfast['breakfast'] = $xx->readBreakfast();

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('css/change-height-weight.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Calculus | Home Page</title>
+</head>
+
+<body>
+    <header>
+        @include('layouts.navbar')
+    </header>
+    <main>
+        <div id="content">
+            <section class="card">
+                <div class="row">
+                    <div class="col-auto">
+                        <img class="profile-photo" src="{{ asset('profilePic/erickwinz30-jiwoni.jpg') }}" alt="foto profile">
+                    </div>
+                    <div class="col">
+                        <p>Jang Gyu-Ri</p>
+                        <p>height</p>
+                        <p>weight</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="">
+                    <li><a href="#account-page">Account</a></li>
+                    <li><a href="#change-height-page">Change height & Weight</a></li>
+                    <li><a href="#progress-page">Progress</a></li><br>
+                    <li><a href="#logout">Log out</a></li>
+
+                </div>
+            </section>
+        </div>
+
+        <aside>
+            <div class="card profile">
+                <ul class="list-group list-group-flush">
+                    <form action="/Calculus/account/update" method="post" enctype="multipart/form-data">
+                        <li class="list-group-item">
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">My height</label>
+                                <input class="form-control" type="text" id="my-height" name="my-height">
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">My weight</label>
+                                <input class="form-control" type="text" id="my-weight" name="my-weight">
+                            </div>
+                        </li>
+                        <button class="btn btn-success" type="submit">Save
+                    </form>
+                </ul>
+            </div>
+        </aside>
+    </main>
+    @include('layouts.footer')
+</body>
+
+</html>
