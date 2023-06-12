@@ -41,8 +41,10 @@
           </div>
           <div class="card-body">
             <div class="food-detail">
-              <label for="food" class="col-11">Indomie Goreng <span>(200gr)</span></label>
-              <label for="amount-of-calories" class="col-1">400 Cals</label>
+              @foreach ($breakfast as $row)
+                <label for="food" class="col-11">{{ $row->food_name }} <span>(200gr)</span></label>
+                <label for="amount-of-calories" class="col-1">{{ $row->food_calories }} Cals</label>
+              @endforeach
             </div>
             <div class="food-detail">
               <label for="food" class="col-11">Ultramilk Full Cream <span>(180ml)</span></label>

@@ -20,7 +20,7 @@
             <section class="card">
                 <div class="row">
                     <div class="col-auto">
-                        <img class="profile-photo" src="{{ asset('public/profilePic/'.Auth::user()->username.'-'.Auth::user()->profilePic.') }}" alt="foto profile">
+                        <img class="profile-photo" src="{{ asset('profilePic/'.Auth::user()->profile_pic) }}" alt="foto profile">
                     </div>
                     <div class="col">
                         @foreach ($account as $row)
@@ -37,7 +37,7 @@
                     <li><a href="#account-page">Account</a></li>
                     <li><a href="#change-height-page">Change height & Weight</a></li>
                     <li><a href="#progress-page">Progress</a></li><br>
-                    <li><a href="#logout">Log out</a></li>
+                    <li><a href="login">Log out</a></li>
 
                 </div>
             </section>
@@ -46,7 +46,7 @@
         <aside>
             <div class="card profile">
                 <ul class="list-group list-group-flush">
-                    <form action="/Calculus/account/update" method="post" enctype="multipart/form-data">
+                    <form action="/account/update" method="post" enctype="multipart/form-data">
                         @foreach ($account as $row)
                         {{ csrf_field() }}
                         <li class="list-group-item">

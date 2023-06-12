@@ -29,7 +29,8 @@
                 <input type="password" placeholder="Enter Password" name="password" required>
 
                 <div class="buttons">
-                    <button type="button" name="register" onclick="window.location.href='http://127.0.0.1:8000/registrasi'">Register</button>
+                    <button type="button" name="register"
+                        onclick="window.location.href='registrasi'">Register</button>
                     <button type="submit" name="kirim" value="kirim">Login</button>
                 </div>
             </form>
