@@ -55,8 +55,8 @@
                     </div>
                 </fieldset>
                 <div class="d-grid gap-2 d-md-block mt-2">
-                    <button class="btn btn-primary" type="button">Back</button>
-                    <button class="btn btn-primary" type="submit" name="kirim">Register</button>
+                    <button class="btn btn-primary" type="button" onclick="window.location.href='http://127.0.0.1:8000/login'">Back</button>
+                    <button class="btn btn-primary" type="submit" name="kirim" onclick="window.location.href='http://127.0.0.1:8000/login'">Register</button>
                 </div>
             </form>
         </div>

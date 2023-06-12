@@ -8,121 +8,116 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="stylesheet" href="{{ asset( 'css/main-page.css' ) }}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <title>Calculus | Home Page</title>
+  <title>Calculus | {{ $title }}</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar">
-      <div class="container">
-        <a class="navbar-brand" href="">
-          <img src="{{ asset('img/logo.png') }}" alt="logo" />
-        </a>
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="health-tips">Health Tips</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="aboutus">About Us</a>
-          </li>
-          <a href="">
-            <img src="{{ asset('profilePic/erickwinz30-jiwoni.jpg') }}" alt=""/>
-          </a>
-        </ul>
-      </div>
-    </nav>
+    @include('layouts.navbar')
   </header>
 
   <main>
     <div id="content">
-      <section class="card">
-        <div class="row">
-          <div class="col-6">
-            <li>Today calorie</li>
+      <div class="container">
+        <section class="card">
+          <div class="change-date">
+            <label for="date_of_birth" class="col-sm-5 col-form-label">Change Date</label>
+            <input type="date" class="form-control" id="change-date" name="change-date">
+            <button class="btn-change" type="submit" name="change-date">Change</button>
           </div>
-          <div class="col-6">
-            <div class="row">
-              <div class="row">
-                <div class="col text-start">
-                  <p class="text-end px-2" style="margin-bottom: 0;">1000/2500</p>
-                </div>
-                <div class="col text-start">
-                  <div class="calorie-btn">
-                    <a class="btn btn-primary py-1" href="detail-page" role="button">Detail</a>
-                  </div>
-                </div>
-              </div>
+        </section>
+
+        <section class="card">
+          <div class="calorie-info">
+            <label class="col-11 py-2">Today's calorie</label>
+            <label class="py-2">2000/2500</label>
+          </div>
+        </section>
+
+        <section class="card foodtime">
+          <div class="card-header">
+            <a href="" class="col-11">Breakfast <i class="bi bi-plus-circle"></i></a>
+            <label for="total-calories" class="col-1">500 Cals</label>
+          </div>
+          <div class="card-body">
+            <div class="food-detail">
+              <label for="food" class="col-11">Indomie Goreng <span>(200gr)</span></label>
+              <label for="amount-of-calories" class="col-1">400 Cals</label>
+            </div>
+            <div class="food-detail">
+              <label for="food" class="col-11">Ultramilk Full Cream <span>(180ml)</span></label>
+              <label for="amount-of-calories" class="col-1">100 Cals</label>
             </div>
           </div>
-      </section>
+        </section>
 
-      <section class="card">
-        <div class="">
-          <li style="text-align: center">Today</li>
-        </div>
-      </section>
-
-      <section class="card foodtime">
-        <div>
+        <section class="card foodtime">
           <div class="card-header">
-            <li>Breakfast</li>
-
-            <a href="add-calorie-page">
-              <img class="btn-img" src="asset/public/img/add-button.png" alt="tambah" />
-            </a>
+            <a href="" class="col-11">Lunch <i class="bi bi-plus-circle"></i></a>
+            <label for="total-calories" class="col-1">500 Cals</label>
           </div>
-          <table class="table_breakfast">
-            <tr>
-              <td>Indomie Goreng</td>
-              <td>200g</td>
-            </tr>
-            <tr>
-              <td>Susu UHT</td>
-              <td>100g</td>
-            </tr>
-          </table>
-        </div>
-      </section>
+          <div class="card-body">
+            <div class="food-detail">
+              <label for="food" class="col-11">Indomie Goreng <span>(200gr)</span></label>
+              <label for="amount-of-calories" class="col-1">400 Cals</label>
+            </div>
+            <div class="food-detail">
+              <label for="food" class="col-11">Ultramilk Full Cream <span>(180ml)</span></label>
+              <label for="amount-of-calories" class="col-1">100 Cals</label>
+            </div>
+          </div>
+        </section>
 
-      <section class="card foodtime">
-        <div>
+        <section class="card foodtime">
           <div class="card-header">
-            <li>Lunch</li>
-            <a href="add-calorie-page">
-              <img class="btn-img" src="asset/public/img/add-button.png" alt="tambah" />
-            </a>
+            <a href="" class="col-11">Dinner <i class="bi bi-plus-circle"></i></a>
+            <label for="total-calories" class="col-1">500 Cals</label>
           </div>
-          <table class="table_lunch">
-            <tr>
-              <td>Indomie Goreng</td>
-              <td>200g</td>
-            </tr>
-            <tr>
-              <td>Susu UHT</td>
-              <td>100g</td>
-            </tr>
-          </table>
-        </div>
-      </section>
+          <div class="card-body">
+            <div class="food-detail">
+              <label for="food" class="col-11">Indomie Goreng <span>(200gr)</span></label>
+              <label for="amount-of-calories" class="col-1">400 Cals</label>
+            </div>
+            <div class="food-detail">
+              <label for="food" class="col-11">Ultramilk Full Cream <span>(180ml)</span></label>
+              <label for="amount-of-calories" class="col-1">100 Cals</label>
+            </div>
+          </div>
+        </section>
+
+        <section class="card foodtime">
+          <div class="card-header">
+            <a href="" class="col-11">Snack <i class="bi bi-plus-circle"></i></a>
+            <label for="total-calories" class="col-1">500 Cals</label>
+          </div>
+          <div class="card-body">
+            <div class="food-detail">
+              <label for="food" class="col-11">Indomie Goreng <span>(200gr)</span></label>
+              <label for="amount-of-calories" class="col-1">400 Cals</label>
+            </div>
+            <div class="food-detail">
+              <label for="food" class="col-11">Ultramilk Full Cream <span>(180ml)</span></label>
+              <label for="amount-of-calories" class="col-1">100 Cals</label>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
     <aside>
       <div class="card nutrition">
-        <li>Today nutrition</li>
+        <p><b>Today's nutrition</b></p>
         <table class="table">
           <tr>
-            <td>fat</td>
+            <td>Fat</td>
             <td>10g</td>
           </tr>
           <tr>
-            <td>cholesterol</td>
+            <td>Cholesterol</td>
             <td>7g</td>
           </tr>
           <tr>
-            <td>protein</td>
+            <td>Protein</td>
             <td>42g</td>
           </tr>
           <tr>
@@ -141,6 +136,7 @@
       </div>
     </aside>
   </main>
+  @include('layouts.footer')
 </body>
 
 </html>

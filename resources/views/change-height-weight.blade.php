@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('public/css/Acc-page.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/change-height-weight.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <title>Calculus | Profile</title>
+    <title>Calculus | Home Page</title>
 </head>
 
 <body>
@@ -20,14 +20,12 @@
             <section class="card">
                 <div class="row">
                     <div class="col-auto">
-                        <img class="profile-photo" src="{{ asset('public/profilePic/'.Auth::user()->username.'-'.Auth::user()->profilePic.') }}" alt="foto profile">
+                        <img class="profile-photo" src="{{ asset('profilePic/erickwinz30-jiwoni.jpg') }}" alt="foto profile">
                     </div>
                     <div class="col">
-                        @foreach ($account as $row)
-                        <p>{{ $row->username }}</p>
+                        <p>Jang Gyu-Ri</p>
                         <p>height</p>
                         <p>weight</p>
-                        @endforeach
                     </div>
                 </div>
             </section>
@@ -47,37 +45,19 @@
             <div class="card profile">
                 <ul class="list-group list-group-flush">
                     <form action="/Calculus/account/update" method="post" enctype="multipart/form-data">
-                        @foreach ($account as $row)
-                        {{ csrf_field() }}
-                        <li class="list-group-item">
-                            <p class="font-weight-bold">Username</p>
-                            <input style="pointer-events: none; filter: brightness(80%);" type="input" name='username' class="form-control form-control-lg" value="{{ $row->username }}" />
-                        </li>
                         <li class="list-group-item">
                             <div class="mb-3">
-                                <label for="formFile" class="form-label">Profile photo</label>
-                                <input class="form-control" type="file" id="profile_pic" name="profile_pic">
+                                <label for="formFile" class="form-label">My height</label>
+                                <input class="form-control" type="text" id="my-height" name="my-height">
                             </div>
                         </li>
                         <li class="list-group-item">
-                            <p class="font-weight-bold">Gender</p>
-                            <p>{{ $row->sex }}</p>
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">My weight</label>
+                                <input class="form-control" type="text" id="my-weight" name="my-weight">
+                            </div>
                         </li>
-                        <li class="list-group-item">
-                            <p class="font-weight-bold">Date Of Birth</p>
-                            <p>{{ $row->date_of_birth }}</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p class="font-weight-bold">Email</p>
-                            <p>{{ $row->email }}</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p class="font-weight-bold"></p>
-                            <p>Password</p>
-                        </li>
-
                         <button class="btn btn-success" type="submit">Save
-                            @endforeach
                     </form>
                 </ul>
             </div>

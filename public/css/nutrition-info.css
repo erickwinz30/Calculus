@@ -14,39 +14,6 @@ html {
     font-family: Inter, sans-serif;
 }
 
-.navbar {
-    background-color: #76DFB7;
-}
-
-.navbar img {
-    width: 50%;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-link:hover {
-    text-decoration: underline 2px;
-    color: white;
-    font-weight: bold;
-}
-
-.active {
-    background-color: white !important;
-    color: #76DFB7 !important;
-    border-radius: 20px !important;
-    font-weight: bold;
-}
-
-.avatar img {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-}
-
 #nutrition-info {
     left: 50%;
     top: 50%;
@@ -90,15 +57,4 @@ form {
 
 .btn:hover {
     opacity: 0.8;
-}
-
-footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    padding: 5px;
-    font-size: 16px;
-    background-color: #76DFB7;
-    text-align: center;
-    color: white;
 }

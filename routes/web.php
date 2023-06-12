@@ -35,12 +35,33 @@ Route::group(['middleware' => ['checkRole:client']], function () {
 //     Route::get('main', [ControllerMainPage::class, 'mainPage'])->name('main.page');
 // });
 
+Route::get('home', [ControllerMainPage::class, 'mainPage']);
+
 Route::get('nutrition-info', function () {
-    return view('nutrition-info');
+    return view('nutrition-info', [
+        'title' => 'Nutrition Information'
+    ]);
 });
 
 Route::get('health-tips', function () {
-    return view('healthtips');
+    return view('healthtips', [
+        'title' => 'Health Tips'
+    ]);
+});
+Route::get('add-food', function () {
+    return view('add-food', [
+        'title' => 'Add Food'
+    ]);
+});
+Route::get('add-calorie', function () {
+    return view('add-calorie-page', [
+        'title' => 'Add Calorie'
+    ]);
+});
+Route::get('change-height-weight', function () {
+    return view('change-height-weight', [
+        'title' => 'Change Height Weight'
+    ]);
 });
 
 // Route::get('account/asset/public/img/logo.png', function () {

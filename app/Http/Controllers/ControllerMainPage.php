@@ -11,7 +11,8 @@ class ControllerMainPage extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function mainPage() {
-        return view('main-page');
+    public function mainPage()
+    {
+        return view('main-page', ['title' => 'Home']);
     }
 }

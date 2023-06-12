@@ -9,7 +9,8 @@ use Illuminate\Routing\Controller as BaseController;
 
 class ControllerAbout extends BaseController
 {
-    public function aboutPage() {
-        return view('about');
+    public function aboutPage()
+    {
+        return view('about', ['title' => 'About Us']);
     }
 }
