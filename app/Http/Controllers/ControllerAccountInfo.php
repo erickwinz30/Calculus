@@ -18,9 +18,11 @@ class ControllerAccountInfo extends BaseController
 
     public function viewAccount() {
         $xx = new ModelAccount();
-        $account = $xx->readAccount();
-        Log::info($account);
-        return view('acc-profile', ['account' => $account]);
+        $account['account'] = $xx->readAccount();
+        $title['title'] = 'Account';
+
+        $allAccount = array_merge($account, $title);
+        return view('acc-profile', $allAccount);
     }
 
     public function updateAccount(Request $x) {

@@ -18,7 +18,7 @@ class ModelMainPage extends Model
 
         $breakfast = DB::table('breakfast')
             ->join('food', 'breakfast.id_food', '=', 'food.id_food')
-            ->select('food.food_name', 'food.food_calories')
+            ->select('food.food_name', 'food.food_calories', 'food.weight')
             ->where('breakfast.id', $id)
             ->where('breakfast.date', $date)
             ->get();
@@ -33,7 +33,7 @@ class ModelMainPage extends Model
 
         $lunch = DB::table('lunch')
             ->join('food', 'lunch.id_food', '=', 'food.id_food')
-            ->select('food.food_name', 'food.food_calories')
+            ->select('food.food_name', 'food.food_calories', 'food.weight')
             ->where('lunch.id', $id)
             ->where('lunch.date', $date)
             ->get();
@@ -49,7 +49,7 @@ class ModelMainPage extends Model
 
         $dinner = DB::table('dinner')
             ->join('food', 'dinner.id_food', '=', 'food.id_food')
-            ->select('food.food_name', 'food.food_calories')
+            ->select('food.food_name', 'food.food_calories', 'food.weight')
             ->where('dinner.id', $id)
             ->where('dinner.date', $date)
             ->get();
@@ -64,7 +64,7 @@ class ModelMainPage extends Model
 
         $snack = DB::table('snack')
             ->join('food', 'snack.id_food', '=', 'food.id_food')
-            ->select('food.food_name', 'food.food_calories')
+            ->select('food.food_name', 'food.food_calories', 'food.weight')
             ->where('snack.id', $id)
             ->where('snack.date', $date)
             ->get();
@@ -74,7 +74,7 @@ class ModelMainPage extends Model
 
     public function readNutrition()
     {
-        $userID = 1; // Replace with the user's ID
+        $userID = Auth::user()->id; // Replace with the user's ID
         $date = '2023-06-01'; // Replace with the desired date
 
         $subquery = DB::query()
