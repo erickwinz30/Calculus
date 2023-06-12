@@ -25,9 +25,9 @@
                         <a class="nav-link active" aria-current="page" href="health-tips">Health Tips</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about">About Us</a>
+                        <a class="nav-link" href="aboutus">About Us</a>
                     </li>
-                    <a class="avatar" href="">
+                    <a class="avatar" href="account">
                         <img src="{{ asset('img/avatar.png') }}" alt="Profile picture" />
                     </a>
                 </ul>

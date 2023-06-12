@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('public/css/Acc-page.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/Acc-page.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <title>Calculus | Home Page</title>
 </head>
@@ -17,11 +17,11 @@
         <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand" href="">
-                    <img src="{{ asset('public/img/logo.png') }}" alt="logo" />
+                    <img src="{{ asset('img/logo.png') }}" alt="logo" />
                 </a>
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="">Home</a>
+                        <a class="nav-link" aria-current="page" href="home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="health-tips">Health Tips</a>
@@ -29,8 +29,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="aboutus">About Us</a>
                     </li>
-                    <a href="">
-                        <img src="{{ asset('public/profilePic/erickwinz30-jiwoni.jpg') }}" alt="profile-img" />
+                    <a href="account">
+                        <img src="{{ asset('profilePic/'.Auth::user()->profile_pic) }}" alt="profile-img" />
                     </a>
                 </ul>
             </div>
@@ -41,7 +41,7 @@
             <section class="card">
                 <div class="row">
                     <div class="col-auto">
-                        <img class="profile-photo" src="{{ asset('public/profilePic/'.Auth::user()->username.'-'.Auth::user()->profilePic.') }}" alt="foto profile">
+                        <img class="profile-photo" src="{{ asset('profilePic/'.Auth::user()->profile_pic) }}" alt="foto profile">
                     </div>
                     <div class="col">
                         @foreach ($account as $row)
@@ -58,7 +58,7 @@
                     <li><a href="#account-page">Account</a></li>
                     <li><a href="#change-height-page">Change height & Weight</a></li>
                     <li><a href="#progress-page">Progress</a></li><br>
-                    <li><a href="#logout">Log out</a></li>
+                    <li><a href="login">Log out</a></li>
 
                 </div>
             </section>
@@ -67,7 +67,7 @@
         <aside>
             <div class="card profile">
                 <ul class="list-group list-group-flush">
-                    <form action="/Calculus/account/update" method="post" enctype="multipart/form-data">
+                    <form action="/account/update" method="post" enctype="multipart/form-data">
                         @foreach ($account as $row)
                             {{ csrf_field() }}
                             <li class="list-group-item">
