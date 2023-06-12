@@ -29,7 +29,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="about">About Us</a>
                     </li>
-                    <a class="avatar" href="">
+                    <a class="avatar" href="account">
                         <img src="{{ asset('img/avatar.png') }}" alt="Profile picture" />
                     </a>
                 </ul>
