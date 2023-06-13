@@ -5,11 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ asset('css/main-page.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <title>Calculus | Main Page</title>
+    <title>Calculus | {{ $title }}</title>
 </head>
 
 <body>
@@ -43,8 +42,8 @@
                     <div class="card-body">
                         <div class="food-detail">
                             @foreach ($breakfast as $row)
-                                <label for="food" class="col-11">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></label>
-                                <label for="amount-of-calories" class="col-1">{{ round($row->food_calories, 1) }} Cals</label>
+                            <label for="food" class="col-11">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></label>
+                            <label for="amount-of-calories" class="col-1">{{ round($row->food_calories, 1) }} Cals</label>
                             @endforeach
                         </div>
                     </div>
@@ -99,7 +98,7 @@
 
         <aside>
             <div class="card nutrition">
-                <p><b>Today's nutrition</b></p>
+                <p><b>Today's nutritions</b></p>
                 <table class="table">
                     <tr>
                         <td>Fat</td>
