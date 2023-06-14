@@ -29,7 +29,6 @@ search-bar {
 }
 aside {
   display: grid;
-  
   grid-column: 2/3;
   align-content: stretch;
   align-items: start;
@@ -39,7 +38,6 @@ aside {
 }
 div-list{
   display: grid;
-  
   grid-column: 1;
   align-content: space-evenly;
   margin: 5px 5px 5px 0;
@@ -159,7 +157,6 @@ div-list{
 td{
   height: 60px;
   width: 50px;
-  
 }
 .td-input-main{
   display: flex;
@@ -298,4 +295,165 @@ footer  {
   background-color: #76DFB7;
   text-align: center;
   color: white;
+  Position: fixed;
+  Bottom: 0;
+}
+
+/*
+||||||||||||||||||
+
+Layar Responsive
+
+||||||||||||||||||
+*/
+
+/* Layar Desktop */
+@media screen and (min-width : 1200) {
+  /* NAVBAR */
+  .navbar img {
+    width: 100%;
+  }
+
+  /* SEARCH SETTING */
+  .search-container {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .search-container > input {
+    width: 100%;
+  }
+
+  /* Main Tabel List */
+  .main {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .input-name-list {
+    width: 100%;
+  }
+
+  .table-main {
+    width: 100%;
+  }
+
+  /* Sidebar List/Summary */
+  .sidebar {
+    width: 100%;
+    margin: 5px 0 10px 0;
+  }
+
+  /* Footer */
+  footer {
+    position: static;
+  }
+}
+/* Layar Tablet */
+@media screen and (min-width : 700) {
+  
+  main {
+    margin: 15px;
+  }
+
+  search-bar {
+    grid-column: 1/3;
+    margin: 10px;
+  }
+
+  aside {
+    grid-column: 1/3;
+    margin: 10px;
+    width: 100%;
+  }
+
+  div-list {
+    margin: 10px;
+    width: 100%;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .search-container > input {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .input-name-list {
+    width: 100%;
+  }
+
+  .table-main {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 10px;
+  }
+
+  footer {
+    position: static;
+  }
+}
+
+/* Layar Handphone */
+@media screen and (min-width : 300) {
+  main {
+    margin: 10px;
+  }
+
+  search-bar {
+    grid-column: 1/3;
+    margin: 10px;
+  }
+
+  aside {
+    grid-column: 1/3;
+    margin: 10px;
+    width: 100%;
+  }
+
+  div-list {
+    margin: 10px;
+    width: 100%;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .search-container > input {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .input-name-list {
+    width: 100%;
+  }
+
+  .table-main {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 10px;
+  }
+
+  footer {
+    position: static;
+  }
 }
