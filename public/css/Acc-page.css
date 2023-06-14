@@ -17,35 +17,18 @@ main {
     margin: 30px;
 }
 
+aside {
+    float: right;
+    width: 70%;
+    margin-right: 30px;
+}
+
 #content {
     width: 25%;
     float: left;
 }
 
-.profile-photo {
-    border-radius: 100px;
-    width: 109px;
-    height: 109px;
-    left: 67px;
-    top: 201px;
-}
-
-aside {
-    float: right;
-    width: 73%;
-}
-
-.navbar {
-    background-color: #76DFB7;
-}
-
-.navbar img {
-    width: 80px;
-    height: 80px;
-}
-
-.card,
-.profile {
+.card {
     width: 100%;
     padding: 10px;
     margin: 20px;
@@ -58,23 +41,46 @@ aside {
     height: auto;
 }
 
-.card li {
-    display: inline-block;
-    margin: 0 1.2em;
-    font-size: 18px;
+.card-item {
+    display: flex;
+    margin: 10px;
 }
 
-.profile {
-    height: auto;
+.profile-photo {
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
 }
 
-footer {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
+.menu a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu li {
+    list-style-type: none;
+    margin: 5px;
+}
+
+.menu li:hover {
+    text-decoration: underline;
+}
+
+.btn-save {
+    font-weight: bold;
     background-color: #76DFB7;
-    text-align: center;
+    color: black;
+    padding: 8px 14px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
     color: white;
+    opacity: 0.8;
 }
 
 /* Responsive Adjustments */
@@ -93,14 +99,7 @@ footer {
         float: none;
     }
 
-    .card,
-    .time,
-    .nutrition {
+    .card {
         margin: 10px;
     }
-
-    .nutrition {
-        max-width: none;
-    }
-
 }

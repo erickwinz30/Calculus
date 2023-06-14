@@ -1,5 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-
 * {
     padding: 0;
     margin: 0;
@@ -19,30 +17,18 @@ main {
     margin: 30px;
 }
 
+aside {
+    float: right;
+    width: 70%;
+    margin-right: 30px;
+}
+
 #content {
-    width: 68%;
+    width: 25%;
     float: left;
 }
 
-aside {
-    float: right;
-    width: 28%;
-}
-
-.change-date,
-.calorie-info {
-    display: flex;
-    margin: 10px 30px 10px 30px;
-    font-weight: bold;
-}
-
-.container {
-    margin-bottom: 50px;
-}
-
-.card,
-.time,
-.nutrition {
+.card {
     width: 100%;
     padding: 10px;
     margin: 20px;
@@ -55,51 +41,54 @@ aside {
     height: auto;
 }
 
-.card-header {
+.card-item {
     display: flex;
-    font-weight: bold;
+    margin: 10px;
 }
 
-.card-header a {
-    text-decoration: none;
+.profile-photo {
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.menu a {
     color: black;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.food-detail {
-    display: flex;
-    margin-bottom: 15px;
+.menu li {
+    list-style-type: none;
+    margin: 5px;
 }
 
-span {
-    color: darkgrey;
+.menu li:hover {
+    text-decoration: underline;
 }
 
-.foodtime {
-    height: auto;
+.btn-cancel {
+    font-weight: bold;
+    background-color: #FF0404;
+    color: black;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.nutrition {
-    max-width: 300px;
-    height: auto;
-    align-items: center;
-}
-
-.table {
-    margin-left: 20px !important;
-    border-bottom-color: #F9F9F9;
-}
-
-.btn-change {
+.btn-save {
+    font-weight: bold;
     background-color: #76DFB7;
     color: black;
+    padding: 8px 14px;
+    margin-right: 10px;
     border: none;
-    border-radius: 5px;
-    padding: 5px;
-    margin-left: 10px;
-    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.btn-change:hover {
+.btn:hover {
     color: white;
     opacity: 0.8;
 }

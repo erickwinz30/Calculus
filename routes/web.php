@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\ControllerAbout;
 use App\Http\Controllers\ControllerAccountInfo;
+use App\Http\Controllers\ControllerFood;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ControllerLogin;
 use App\Http\Controllers\ControllerMainPage;
 use App\Http\Middleware\CheckRole;
@@ -21,45 +23,51 @@ use App\Http\Middleware\CheckRole;
 Route::group(['middleware' => ['checkRole:client']], function () {
     Route::get('/', [ControllerMainPage::class, 'mainPage']);
     Route::get('home', [ControllerMainPage::class, 'mainPage']);
+
+    //list-food
     Route::get('add-food', function () {
-        return view('add-food');
+        return view('add-food', [
+            'title' => 'Add Food'
+        ]);
     });
-    Route::get('account/{username}', [ControllerAccountInfo::class, 'viewAccount']);
+    Route::post('add-food/add', [ControllerFood::class, 'addListFood']);
+
+    Route::get('add-calorie', function () {
+        return view('add-calorie-page', [
+            'title' => 'Add Calorie'
+        ]);
+    });
+
+    //account
+    Route::get('account', [ControllerAccountInfo::class, 'viewAccount']);
     Route::post('account/update', [ControllerAccountInfo::class, 'updateAccount']);
-    Route::get('account/{username}', [ControllerAccountInfo::class, 'viewAccount']);
-    Route::get('about', [ControllerAbout::class, 'aboutPage']);
+
+    //aboutus
+    Route::get('aboutus', [ControllerAbout::class, 'aboutPage']);
+
+    Route::get('change-height-weight', function () {
+        return view('change-height-weight', [
+            'title' => 'Change Height Weight'
+        ]);
+    });
+    Route::post('height-weight/run', [ControllerAccountInfo::class, 'bmr']);
+
+    Route::get('nutrition-info', function () {
+        return view('nutrition-info', [
+            'title' => 'Nutrition Information'
+        ]);
+    });
+    
+    Route::get('health-tips', function () {
+        return view('healthtips', [
+            'title' => 'Health Tips'
+        ]);
+    });
 });
-
-
-// Route::middleware(['auth', CheckRole::class.':client'])->group(function () {
-//     Route::get('main', [ControllerMainPage::class, 'mainPage'])->name('main.page');
-// });
-
-Route::get('nutrition-info', function () {
-    return view('nutrition-info');
-});
-
-Route::get('health-tips', function () {
-    return view('healthtips');
-});
-
-// Route::get('account/asset/public/img/logo.png', function () {
-//     return 
-// });
-
-Route::get('account/{username}', [ControllerAccountInfo::class, 'viewAccount']);
-Route::post('account/update', [ControllerAccountInfo::class, 'updateAccount']);
-Route::get('account/{username}', [ControllerAccountInfo::class, 'viewAccount']);
-Route::get('about', [ControllerAbout::class, 'aboutPage']);
 
 //login
 Route::get('login', [ControllerLogin::class, 'login']);
 Route::post('actionlogin', [ControllerLogin::class, 'actionlogin']);
-
-
-Route::get('/berhasil', function () {
-    return view('success');
-});
 
 //registrasi
 Route::get('registrasi', [ControllerLogin::class, 'registrasi']);
