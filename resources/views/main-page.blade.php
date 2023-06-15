@@ -22,22 +22,25 @@
                 <section class="card">
                     <div class="change-date">
                         <label for="date_of_birth" class="col-sm-5 col-form-label">Change Date</label>
-                        <input type="date" class="form-control" id="change-date" name="change-date">
-                        <button class="btn-change" type="submit" name="change-date">Change</button>
+                        <form action="{{ route('mainPage.date') }}" method="POST" id="form-date">
+                            {{ csrf_field() }}
+                            <input type="date" class="form-control" id="date" name="date" value="{{ $date }}">
+                            <button class="btn-change" type="submit" name="change-date">Change</button>
+                        </form>
                     </div>
                 </section>
 
                 <section class="card">
                     <div class="calorie-info">
                         <label class="col-11 py-2">Today's calorie</label>
-                        <label class="py-2">2000/2500</label>
+                        <label class="py-2">{{ round($totalNutrition->total_calories) }}/{{ round(Auth::user()->bmr) }}</label>
                     </div>
                 </section>
 
                 <section class="card foodtime">
                     <div class="card-header">
                         <a href="" class="col-11">Breakfast <i class="bi bi-plus-circle"></i></a>
-                        <label for="total-calories" class="col-1">500 Cals</label>
+                        <label for="total-calories" class="col-1">{{ round($breakfastCalorie->total_breakfast_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
                         <div class="food-detail">
@@ -52,7 +55,7 @@
                 <section class="card foodtime">
                     <div class="card-header">
                         <a href="" class="col-11">Lunch <i class="bi bi-plus-circle"></i></a>
-                        <label for="total-calories" class="col-1">500 Cals</label>
+                        <label for="total-calories" class="col-1">{{ round($lunchCalorie->total_lunch_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
                         @foreach ($lunch as $row)
@@ -67,7 +70,7 @@
                 <section class="card foodtime">
                     <div class="card-header">
                         <a href="" class="col-11">Dinner <i class="bi bi-plus-circle"></i></a>
-                        <label for="total-calories" class="col-1">500 Cals</label>
+                        <label for="total-calories" class="col-1">{{ round($dinnerCalorie->total_dinner_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
                         @foreach ($dinner as $row)
@@ -82,7 +85,7 @@
                 <section class="card foodtime">
                     <div class="card-header">
                         <a href="" class="col-11">Snack <i class="bi bi-plus-circle"></i></a>
-                        <label for="total-calories" class="col-1">500 Cals</label>
+                        <label for="total-calories" class="col-1">{{ round($snackCalorie->total_snack_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
                         @foreach ($snack as $row)
