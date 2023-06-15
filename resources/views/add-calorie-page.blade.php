@@ -37,7 +37,22 @@
                             </h2>
                         </td>
                         <td class="td-input-main">
-                            <h2 class="input-data-list" data-gram="" data-calorie=""> 50gr 400Cals </h2>
+                            <h2 class="input-data-gram" data-gram="50gr">50gr</h2>
+                            <h2 class="input-data-calorie" data-calorie="400Cals">400Cals</h2>
+                        </td>
+                    </tr>
+                    <tr class="tr-main">
+                        <td>
+                            <h2 class="input-name-list" data-name="Nasi Goreng">
+                                Nasi Goreng
+                                <button class="food-btn">
+                                    <i class="bi bi-plus-circle-fill"></i>
+                                </button>
+                            </h2>
+                        </td>
+                        <td class="td-input-main">
+                            <h2 class="input-data-gram" data-gram="50gr">50gr</h2>
+                            <h2 class="input-data-calorie" data-calorie="400Cals">400Cals</h2>
                         </td>
                     </tr>
                 </table>
@@ -63,43 +78,73 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
     <script>
-        window.addEventListener('load', function() {
-            const calorieSummaryList = document.querySelector('#calorie-summary-list');
-            const foodList = document.querySelector('#food-list');
+        window.addEventListener('load', function(){
+        const calorieSummaryList = document.querySelector('#calorie-summary-list');
+        const foodList = document.querySelector('#food-list');
+        const searchButton = document.querySelector('#searchButtonElement');
+        const searchInput = document.querySelector('#searchElement');
 
-            const foodButtons = document.querySelector('.food-btn');
-            foodButtons.forEach((foodButton) => {
-                foodButton.addEventListener('click', function() {
-                    const foodName = foodButton.parentElement.dataset.name;
-                    const foodGram = foodButton.parentElement.dataset.gram;
-                    const foodCalorie = foodButton.parentElement.dataset.calorie;
+        searchButton.addEventListener('click', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const foodItems = foodList.querySelectorAll('.tr-main');
 
-                    const calorieSummaryItem = `
-                        <tr class="tr-aside">
-                            <td>
-                                <h2 class="input" id="input-name">${foodName}</h2>
-                            </td>
-                            <td class="td-button-delete">
-                            <h2 class="input" id="input-gram">${foodGram}</h2>
-                            <h2 class="input" id="input-calorie">${foodGram}</h2>
-                            <button class="delete-button">Delete</button>
-                            </td>
-                        </tr>
-                    `;
-
-                    calorieSummaryList.innerHTML += calorieSummaryItem;
-                });
+            foodItems.forEach((foodItem) => {
+                const foodName = foodItem.querySelector('.input-name-list').textContent.toLowerCase();
+            
+                if (foodName.includes(searchTerm)) {
+                    foodItem.style.display = 'table-row';
+                } else {
+                    foodItem.style.display = 'none';
+                }
             });
+        });
 
-            const deleteButtons = document.querySelectorAll('.delete-button');
-            deleteButtons.forEach((deleteButton) => {
-                deleteButton.addEventListener('click', function() {
-                    const row = deleteButton.closest('.tr-aside');
-                    row.remove();
+
+        /* Bagian Main List yang di pindahkan datanya ke Side Bar */
+        const foodButtons = document.querySelectorAll('.food-btn');
+        foodButtons.forEach((foodButton) => {
+            foodButton.addEventListener('click', function(){
+                console.log(foodButton.parentElement);
+
+                /* Tangkap data dari induk class="tr-main" */
+                const parentElement = foodButton.closest('.tr-main');
+                const foodName = parentElement.querySelector('.input-name-list').dataset.name;
+                const foodGram = parentElement.querySelector('.input-data-gram').dataset.gram;
+                const foodCalorie = parentElement.querySelector('.input-data-calorie').dataset.calorie;           
+                
+                /* Input ke data class="tr-aside" */
+                const calorieSummaryItem = `
+                    <tr class="tr-aside">
+                        <td>
+                            <h2 class="input-name-add" id="input-name">${foodName}</h2>
+                        </td>
+                        <td class="td-add">
+                            <h2 class="input-gram" id="input-gram">${foodGram}</h2>
+                            <h2 class="input-calorie" id="input-calorie">${foodCalorie}</h2>
+                            <button class="delete-button">Delete</button>
+                        </td>
+                    </tr>
+                `;
+        
+                calorieSummaryList.innerHTML += calorieSummaryItem;
+
+                /* Tombol Delete menagkap data yang berada di dalam class="tr-aside" */
+                const deleteButtons = document.querySelectorAll('.delete-button');
+                console.log(deleteButtons)
+                
+                deleteButtons.forEach((button) => {
+                    button.addEventListener('click', function() {
+                        const row = button.closest('.tr-aside');
+                        deleteRow(row);
+                    });
                 });
             });
         });
+        /* Tombol Delete menghapus seluruh data yang berada di dalam tombol Delete */
+        function deleteRow(row) {
+            row.remove();
+        }; 
+    });
     </script>
 </body>
-
 </html>
