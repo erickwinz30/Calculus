@@ -27,28 +27,33 @@ class ControllerAccountInfo extends BaseController
 
     public function updateAccount(Request $x) {
         if ($x->hasFile('profile_pic')) {
-            // $x->file('profile_pic')->move('profilePic/', $x->file('profile_pic')->getClientOriginalName());
-
+            $xx = new ModelAccount();
+            $xx->updateAccountWithPicture($x);
+            return redirect('account');
+        } else {
             $xx = new ModelAccount();
             $xx->updateAccount($x);
             return redirect('account');
         }
     }
 
-    public function bmr(Request $x) {
-        $height = $x['height'];
-        $weight = $x['weight'];
-        $umurDB = Auth::user()->date_of_birth;
-        $umur = Carbon::parse($umurDB)->age; // Calculate the current age based on date of birth
-        Log::info($umur);
-        $sex = Auth::user()->sex;
+    public function getHeightWeight() {
+        $xx = new ModelAccount();
+        $height_weight['height_weight'] = $xx->readAccount();
+        $title['title'] = 'Change Height Weight';
 
-        if ($sex == 'laki-laki') {
-            $bmr = 66.5 + (13.7 * $weight) + (5 * $height) - (6.8 * $umur);
-        } else if ($sex == 'perempuan') {
-            $bmr = 655 + (9.6 * $weight) + (1.8 * $height) - (4.7 * $umur);
-        }
-        
-        echo 'Hasil BMR = ' .$bmr;
+        $allAccount = array_merge($height_weight, $title);
+        return view('change-height-weight', $allAccount);
+    }
+
+    public function updateHeightWeight(Request $x) {
+        $validateData = $x->validate([
+            'my-height' => 'required|numeric',
+            'my-weight' => 'required|numeric',
+        ]);
+        $xx = new ModelAccount();
+        $xx->height_weight($validateData);
+
+        return redirect('change-height-weight');
     }
 }

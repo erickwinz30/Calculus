@@ -23,6 +23,7 @@ use App\Http\Middleware\CheckRole;
 Route::group(['middleware' => ['checkRole:client']], function () {
     Route::get('/', [ControllerMainPage::class, 'mainPage']);
     Route::get('home', [ControllerMainPage::class, 'mainPage']);
+    Route::post('/', [ControllerMainPage::class, 'mainPage'])->name('mainPage.date');
 
     //list-food
     Route::get('add-food', function () {
@@ -45,12 +46,9 @@ Route::group(['middleware' => ['checkRole:client']], function () {
     //aboutus
     Route::get('aboutus', [ControllerAbout::class, 'aboutPage']);
 
-    Route::get('change-height-weight', function () {
-        return view('change-height-weight', [
-            'title' => 'Change Height Weight'
-        ]);
-    });
-    Route::post('height-weight/run', [ControllerAccountInfo::class, 'bmr']);
+    //height weight
+    Route::get('change-height-weight', [ControllerAccountInfo::class, 'getHeightWeight']);
+    Route::post('height-weight/update', [ControllerAccountInfo::class, 'updateHeightWeight']);
 
     Route::get('nutrition-info', function () {
         return view('nutrition-info', [

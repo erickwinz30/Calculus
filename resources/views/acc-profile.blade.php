@@ -25,8 +25,8 @@
                     <div class="col mt-1">
                         @foreach ($account as $row)
                         <p><b>{{ $row->username }}</b></p>
-                        Height: <br>
-                        Weight:
+                        Height : {{ $row->height }} cm<br>
+                        Weight: {{ $row->weight }} kg
                         @endforeach
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="card-item">
                         <label class="col-2"><b>Date of Birth</b></label>
-                        <input type="date" class="form-control" name="date-of-birth" value="{{ $row->date_of_birth }}">
+                        <input type="date" class="form-control" name="date_of_birth" value="{{ $row->date_of_birth }}">
                     </div>
                     <div class="card-item">
                         <label class="col-2"><b>Email</b></label>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="card-item">
                         <label class="col-2"><b>Password</b></label>
-                        <input type="password" class="form-control" name="password" value="{{ $row->password }}">
+                        <input type="password" class="form-control" name="password">
                     </div>
                     <div class="d-grid justify-content-md-end">
                         <button class="btn-save" type="submit" value="add">Save</button>
