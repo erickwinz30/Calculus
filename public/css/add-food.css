@@ -15,7 +15,7 @@ html {
 }
 
 .title {
-    margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
     color: #76DFB7;
 }
@@ -34,13 +34,13 @@ html {
 form {
     width: 50%;
     height: 50%;
-    margin-top: 50px;
 }
 
 .btn-cancel {
     background-color: #FF0404;
     color: black;
     padding: 8px 14px;
+    font-weight: bold;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -50,6 +50,7 @@ form {
     background-color: #76DFB7;
     color: black;
     padding: 8px 14px;
+    font-weight: bold;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -57,4 +58,5 @@ form {
 
 .btn:hover {
     opacity: 0.8;
+    color: white;
 }
