@@ -33,22 +33,22 @@ Route::group(['middleware' => ['checkRole:client']], function () {
     });
     Route::post('add-food/add', [ControllerFood::class, 'addListFood']);
 
-    Route::get('add-calorie-breakfast', function () {
+    Route::get('addBreakfast', function () {
         return view('add-calorie-breakfast', [
             'title' => 'Add Calorie'
         ]);
     });
-    Route::get('add-calorie-lunch', function () {
+    Route::get('addLunch', function () {
         return view('add-calorie-lunch', [
             'title' => 'Add Calorie'
         ]);
     });
-    Route::get('add-calorie-dinner', function () {
+    Route::get('addDinner', function () {
         return view('add-calorie-dinner', [
             'title' => 'Add Calorie'
         ]);
     });
-    Route::get('add-calorie-snack', function () {
+    Route::get('addSnack', function () {
         return view('add-calorie-snack', [
             'title' => 'Add Calorie'
         ]);

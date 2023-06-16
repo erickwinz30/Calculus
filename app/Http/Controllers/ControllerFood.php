@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 class ControllerFood extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function searchFood($query) {
+        $searchResult = $query;
+    }
     
     public function addListFood(Request $x) {
         $this->validate($x, [
