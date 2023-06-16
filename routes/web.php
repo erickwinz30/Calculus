@@ -33,8 +33,23 @@ Route::group(['middleware' => ['checkRole:client']], function () {
     });
     Route::post('add-food/add', [ControllerFood::class, 'addListFood']);
 
-    Route::get('add-calorie', function () {
-        return view('add-calorie-page', [
+    Route::get('add-calorie-breakfast', function () {
+        return view('add-calorie-breakfast', [
+            'title' => 'Add Calorie'
+        ]);
+    });
+    Route::get('add-calorie-lunch', function () {
+        return view('add-calorie-lunch', [
+            'title' => 'Add Calorie'
+        ]);
+    });
+    Route::get('add-calorie-dinner', function () {
+        return view('add-calorie-dinner', [
+            'title' => 'Add Calorie'
+        ]);
+    });
+    Route::get('add-calorie-snack', function () {
+        return view('add-calorie-snack', [
             'title' => 'Add Calorie'
         ]);
     });
@@ -55,7 +70,7 @@ Route::group(['middleware' => ['checkRole:client']], function () {
             'title' => 'Nutrition Information'
         ]);
     });
-    
+
     Route::get('health-tips', function () {
         return view('healthtips', [
             'title' => 'Health Tips'

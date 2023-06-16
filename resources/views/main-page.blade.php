@@ -21,10 +21,10 @@
             <div class="container">
                 <section class="card">
                     <div class="change-date">
-                        <label for="date_of_birth" class="col-sm-5 col-form-label">Change Date</label>
+                        <label for="date_of_birth" class="col-sm-7 col-form-label">Change Date</label>
                         <form action="{{ route('mainPage.date') }}" method="POST" id="form-date">
                             {{ csrf_field() }}
-                            <input type="date" class="form-control" id="date" name="date" value="{{ $date }}">
+                            <input type="date" class="form-control col-1" id="date" name="date" value="{{ $date }}">
                             <button class="btn-change" type="submit" name="change-date">Change</button>
                         </form>
                     </div>
@@ -39,14 +39,14 @@
 
                 <section class="card foodtime">
                     <div class="card-header">
-                        <a href="" class="col-11">Breakfast <i class="bi bi-plus-circle"></i></a>
-                        <label for="total-calories" class="col-1">{{ round($breakfastCalorie->total_breakfast_calorie ) }} Cals</label>
+                        <a href="" class="col-10">Breakfast <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+                        <label for="total-calories" class="col-2 d-grid justify-content-md-end">{{ round($breakfastCalorie->total_breakfast_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
                         <div class="food-detail">
                             @foreach ($breakfast as $row)
-                            <label for="food" class="col-11">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></label>
-                            <label for="amount-of-calories" class="col-1">{{ round($row->food_calories, 1) }} Cals</label>
+                            <a href="" class="col-10">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></a>
+                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories, 1) }} Cals</label>
                             @endforeach
                         </div>
                     </div>
@@ -54,14 +54,14 @@
 
                 <section class="card foodtime">
                     <div class="card-header">
-                        <a href="" class="col-11">Lunch <i class="bi bi-plus-circle"></i></a>
-                        <label for="total-calories" class="col-1">{{ round($lunchCalorie->total_lunch_calorie ) }} Cals</label>
+                        <a href="" class="col-10">Lunch <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+                        <label for="total-calories" class="col-2 d-grid justify-content-md-end">{{ round($lunchCalorie->total_lunch_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
                         @foreach ($lunch as $row)
                         <div class="food-detail">
-                            <label for="food" class="col-11">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></label>
-                            <label for="amount-of-calories" class="col-1">{{ round($row->food_calories, 1) }} Cals</label>
+                            <a href="" class="col-10">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></a>
+                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories, 1) }} Cals</label>
                         </div>
                         @endforeach
                     </div>
@@ -69,14 +69,14 @@
 
                 <section class="card foodtime">
                     <div class="card-header">
-                        <a href="" class="col-11">Dinner <i class="bi bi-plus-circle"></i></a>
-                        <label for="total-calories" class="col-1">{{ round($dinnerCalorie->total_dinner_calorie ) }} Cals</label>
+                        <a href="" class="col-10">Dinner <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+                        <label for="total-calories" class="col-2 d-grid justify-content-md-end">{{ round($dinnerCalorie->total_dinner_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
                         @foreach ($dinner as $row)
                         <div class="food-detail">
-                            <label for="food" class="col-11">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></label>
-                            <label for="amount-of-calories" class="col-1">{{ round($row->food_calories, 1) }} Cals</label>
+                            <a href="" class="col-10">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></a>
+                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories, 1) }} Cals</label>
                         </div>
                         @endforeach
                     </div>
@@ -84,14 +84,14 @@
 
                 <section class="card foodtime">
                     <div class="card-header">
-                        <a href="" class="col-11">Snack <i class="bi bi-plus-circle"></i></a>
-                        <label for="total-calories" class="col-1">{{ round($snackCalorie->total_snack_calorie ) }} Cals</label>
+                        <a href="" class="col-10">Snack <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+                        <label for="total-calories" class="col-2 d-grid justify-content-md-end">{{ round($snackCalorie->total_snack_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
                         @foreach ($snack as $row)
                         <div class="food-detail">
-                            <label for="food" class="col-11">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></label>
-                            <label for="amount-of-calories" class="col-1">{{ round($row->food_calories, 1) }} Cals</label>
+                            <a href="" class="col-10">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></a>
+                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories, 1) }} Cals</label>
                         </div>
                         @endforeach
                     </div>

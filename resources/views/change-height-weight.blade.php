@@ -36,7 +36,6 @@
                 <div class="menu">
                     <li><a href="account">Account</a></li>
                     <li><a href="change-height-weight">Change height & Weight</a></li>
-                    <li><a href="#progress-page">Progress</a></li>
                     <li><a href="login">Log out</a></li>
                 </div>
             </section>

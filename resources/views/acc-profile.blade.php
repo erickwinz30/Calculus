@@ -36,7 +36,6 @@
                 <div class="menu">
                     <li><a href="account">Account</a></li>
                     <li><a href="change-height-weight">Change height & Weight</a></li>
-                    <li><a href="#progress-page">Progress</a></li>
                     <li><a href="login">Log out</a></li>
                 </div>
             </section>
@@ -52,12 +51,23 @@
                         <input type="input" name='username' class="form-control" value="{{ $row->username }}" disabled>
                     </div>
                     <div class="card-item">
+                        <label class="col-2"><b>Name</b></label>
+                        <input type="input" class="form-control" name="name" value="{{ $row->name }}">
+                    </div>
+                    <div class="card-item">
                         <label for="formFile" class="form-label col-2"><b>Profile Photo</b></label>
                         <input class="form-control" type="file" id="profile_pic" name="profile_pic">
                     </div>
                     <div class="card-item">
                         <label class="col-2"><b>Gender</b></label>
-                        <input type="input" class="form-control" name="sex" value="{{ $row->sex }}">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sex" checked>
+                            <label class="form-check-label">Laki-laki</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sex">
+                            <label class="form-check-label">Perempuan</label>
+                        </div>
                     </div>
                     <div class="card-item">
                         <label class="col-2"><b>Date of Birth</b></label>
@@ -65,7 +75,7 @@
                     </div>
                     <div class="card-item">
                         <label class="col-2"><b>Email</b></label>
-                        <input type="input" class="form-control" name="email" value="{{ $row->email }}">
+                        <input type="email" class="form-control" name="email" value="{{ $row->email }}">
                     </div>
                     <div class="card-item">
                         <label class="col-2"><b>Password</b></label>

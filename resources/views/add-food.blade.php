@@ -17,7 +17,7 @@
     <main>
         <h3 class="title">Add New Food/Drink</h3>
         <form action="{{ url()->current() }}/add" method="post" id="add-food">
-            {{-- <p class="instruction">*Isi dalam satuan berat makanan gram (ex: 10 gr)</p> --}}
+            <p class="instruction">*Isi dalam satuan berat makanan gram (ex: 10 gr)</p>
             {{ csrf_field() }}
             <div class="row mb-2">
                 <label for="food_name" class="col-sm-4 col-form-label"><b>Nama Makanan/Minuman</b></label>
