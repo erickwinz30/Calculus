@@ -23,6 +23,7 @@ use App\Http\Middleware\CheckRole;
 Route::group(['middleware' => ['checkRole:client']], function () {
     Route::get('/', [ControllerMainPage::class, 'mainPage']);
     Route::get('home', [ControllerMainPage::class, 'mainPage']);
+    Route::post('/', [ControllerMainPage::class, 'mainPage'])->name('mainPage.date');
 
     //list-food
     Route::get('add-food', function () {
@@ -32,8 +33,23 @@ Route::group(['middleware' => ['checkRole:client']], function () {
     });
     Route::post('add-food/add', [ControllerFood::class, 'addListFood']);
 
-    Route::get('add-calorie', function () {
-        return view('add-calorie-page', [
+    Route::get('add-calorie-breakfast', function () {
+        return view('add-calorie-breakfast', [
+            'title' => 'Add Calorie'
+        ]);
+    });
+    Route::get('add-calorie-lunch', function () {
+        return view('add-calorie-lunch', [
+            'title' => 'Add Calorie'
+        ]);
+    });
+    Route::get('add-calorie-dinner', function () {
+        return view('add-calorie-dinner', [
+            'title' => 'Add Calorie'
+        ]);
+    });
+    Route::get('add-calorie-snack', function () {
+        return view('add-calorie-snack', [
             'title' => 'Add Calorie'
         ]);
     });
@@ -45,19 +61,16 @@ Route::group(['middleware' => ['checkRole:client']], function () {
     //aboutus
     Route::get('aboutus', [ControllerAbout::class, 'aboutPage']);
 
-    Route::get('change-height-weight', function () {
-        return view('change-height-weight', [
-            'title' => 'Change Height Weight'
-        ]);
-    });
-    Route::post('height-weight/run', [ControllerAccountInfo::class, 'bmr']);
+    //height weight
+    Route::get('change-height-weight', [ControllerAccountInfo::class, 'getHeightWeight']);
+    Route::post('height-weight/update', [ControllerAccountInfo::class, 'updateHeightWeight']);
 
     Route::get('nutrition-info', function () {
         return view('nutrition-info', [
             'title' => 'Nutrition Information'
         ]);
     });
-    
+
     Route::get('health-tips', function () {
         return view('healthtips', [
             'title' => 'Health Tips'

@@ -15,228 +15,274 @@ html {
 }
 
 main {
-  width: 100%;
-  height: auto;
   margin: 30px;
-  display: grid;
-  align-items: start;
-  justify-items: stretch;
 }
 
-search-bar {
-  display: grid;
-  grid-column: 1/2;
-  width: 100%;
+#content {
+  width: 55%;
+  float: left;
 }
 
 aside {
-  display: grid;
+  float: right;
+  width: 40%;
+  margin: 0 30px;
+}
 
-  grid-column: 2/3;
-  align-content: stretch;
-  align-items: start;
-  margin: 0px 50px 20px 5px;
-  width: 50%;
+.card {
+  width: 100%;
   height: auto;
+  padding: 10px;
+  margin: 20px;
+  background: #F9F9F9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px !important;
 }
 
-div-list {
-  display: grid;
-
-  grid-column: 1;
-  align-content: space-evenly;
-  margin: 5px 5px 5px 0;
-  width: 50%;
-}
-
-/* SEARCH SETTING */
-.search-container {
+#search {
   display: flex;
-  width: 600px;
-  height: 40px;
-  top: 181px;
-  margin: 0px 0px 0px 20px;
+}
 
+.form-control {
+  border: none !important;
+}
+
+#search>.btn {
+  background-color: #76DFB7;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#search>.btn:hover,
+.delete-button:hover {
+  color: white;
+  opacity: 0.8;
+}
+
+.add {
+  font-weight: bold;
+  color: #76DFB7;
+  margin: 10px 0 20px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.food {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 8px;
   background: #F9F9F9;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
-.search-container>input {
-
-  height: 100%;
-  width: 75%;
-  padding: 16px;
-  border: none;
-  outline: none;
-  background: none;
-  font-weight: bold;
-  border-radius: 10px;
-}
-
-.search-container>button {
-
-  width: 20%;
-  cursor: pointer;
-  margin-left: auto;
-  padding: 8px;
-  background-color: #76DFB7;
-  color: #000000;
-  border: 0;
-  text-transform: uppercase;
-  border-radius: 10px;
-}
-
-/* Main Tabel List */
-.main {
-  display: grid;
-  justify-content: start;
-  width: 600px;
-  height: 100%;
-  padding: 10px;
-  margin: 10px 0px 10px 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  overflow: hidden;
-  font-family: Inter, sans-serif;
-}
-
-.input-name-list {
-  display: flex;
-  font-size: 15px;
-}
-
-.table-main {
-  width: 550px;
-}
-
-.tr-main {
-  height: 10px;
-  width: 100%;
-  padding: 16px;
-}
-
-td {
-  height: 10px;
-  width: 50px;
-
-}
-
-.td-input-main {
-  text-align: right;
-  width: 10px;
-}
-
-.input-data-list {
-  font-size: 15px;
-  text-align: right;
-}
-
-.td-button-i {
-  text-align: center;
-  padding: 0;
-  width: 10px;
-}
-
-td .input {
-  width: 50px;
-  border-radius: 10px;
-}
-
-.bi {
-  fill: #76DFB7;
-}
-
 .food-btn {
-  border: 1px;
-  border-radius: 50px;
-  margin: 1px;
-  padding: none;
-  background-color: white;
+  border: none;
+  background: #F9F9F9;
 }
 
-i {
-  width: 30px;
-  height: 30px;
-}
-
-/* Sidebar List/Summary*/
-.sidebar {
-  display: grid;
-  justify-items: center;
-  width: 600px;
-  height: 100%;
-  padding: 10px;
-  margin: 5px 10px 10px 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.input-gram {
+  width: 60px;
+  height: 25px;
   border-radius: 5px;
-  overflow: hidden;
-  font-family: Inter, sans-serif;
-}
-
-.calorie-summary {
   text-align: center;
 }
 
-.table-aside {
-
-  width: 100%;
+h4 {
+  text-align: center;
 }
 
-.tr-aside {
-  height: 10px;
-  width: 100%;
-  padding: 16px;
+.summary {
+  display: flex;
 }
 
-td {
-  height: 10px;
-  width: 50px;
-
-}
-
-.td-input-aside {
-  text-align: right;
-  width: 10px;
-}
-
-.td-button-delete {
-  text-align: right;
+.nominal {
+  display: flex;
   padding: 0;
-  width: 10px;
-}
-
-td .input {
-  width: 50px;
-  border-radius: 10px;
+  margin-left: 140px;
+  width: auto;
+  gap: 10px;
+  align-items: center;
 }
 
 .delete-button {
-  width: 80px;
-  height: 30px;
-  margin: 0;
-  place-content: center;
-  font-size: 15px;
   background-color: #FF0404;
-  border-radius: 10px;
-  border: 1px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
-.add {
-  width: 60px;
-  height: 30px;
-  display: flex;
-  align-content: space-around;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  border: 1px;
+.card>.btn {
+  background-color: #76DFB7;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: auto;
+  font-weight: bold;
 }
 
-h2 {
-  text-align: left;
+.card>.btn:hover {
+  background-color: #76DFB7;
+  color: white;
+  opacity: 0.8;
 }
 
-.input {
-  font-size: 20px;
+/*
+||||||||||||||||||
+
+Layar Responsive
+
+||||||||||||||||||
+*/
+
+/* Layar Desktop */
+@media screen and (min-width : 1200) {
+
+  /* SEARCH SETTING */
+  .search-container {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .search-container>input {
+    width: 100%;
+  }
+
+  /* Main Tabel List */
+  .main {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .input-name-list {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  /* Sidebar List/Summary */
+  .sidebar {
+    width: 100%;
+    margin: 5px 0 10px 0;
+  }
+}
+
+/* Layar Tablet */
+@media screen and (min-width : 700) {
+
+  main {
+    margin: 15px;
+  }
+
+  search-bar {
+    grid-column: 1/3;
+    margin: 10px;
+  }
+
+  aside {
+    grid-column: 1/3;
+    margin: 10px;
+    width: 100%;
+  }
+
+  div-list {
+    margin: 10px;
+    width: 100%;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .search-container>input {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .input-name-list {
+    width: 100%;
+  }
+
+  .table-main {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 10px;
+  }
+
+  footer {
+    position: static;
+  }
+}
+
+/* Layar Handphone */
+@media screen and (min-width : 300) {
+  main {
+    margin: 10px;
+  }
+
+  search-bar {
+    grid-column: 1/3;
+    margin: 10px;
+  }
+
+  aside {
+    grid-column: 1/3;
+    margin: 10px;
+    width: 100%;
+  }
+
+  div-list {
+    margin: 10px;
+    width: 100%;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .search-container>input {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .input-name-list {
+    width: 100%;
+  }
+
+  .table-main {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 10px;
+  }
+
+  footer {
+    position: static;
+  }
 }

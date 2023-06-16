@@ -16,10 +16,12 @@ form {
     background-color: #76DFB7 !important;
     color: black !important;
     border: none !important;
+    font-weight: bold !important;
 }
 
 .btn-primary:hover {
     opacity: 0.8;
+    color: white !important;
 }
 
 .imgcontainer {

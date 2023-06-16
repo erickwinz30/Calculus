@@ -57,22 +57,6 @@
                 </ul>
             </div>
             <div class="card">
-                <img src="{{ asset('img/bilal.jpeg') }}" class="card-img-top" alt="Muhammad Bilal Al-Asy'ari">
-                <div class="card-body">
-                    <h6>Muhammad Bilal Al-Asy'ari</h6><br>
-                    <p>
-                        Teknik Informatika<br>
-                        STT Terpadu Nurul Fikri<br>
-                        <i class="fa-regular fa-envelope"></i> shiroe.kagamishi@gmail.com
-                    </p>
-                </div>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/muhammad-bilal-al-asy-ari-647b42214/"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/shiroe2018"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="https://www.instagram.com/shiroe_shi/"><i class="fa-brands fa-instagram"></i></a></li>
-                </ul>
-            </div>
-            <div class="card">
                 <img src="{{ asset('img/siti.jpg') }}" class="card-img-top" alt="Siti Khoiriati">
                 <div class="card-body">
                     <h6>Siti Khoiriati</h6><br>
@@ -86,6 +70,22 @@
                     <li><a href="https://www.linkedin.com/in/siti-khoiriati-03691b260/"><i class="fa-brands fa-linkedin"></i></a></li>
                     <li><a href="https://github.com/Khoiriati"><i class="fa-brands fa-github"></i></a></li>
                     <li><a href="https://www.instagram.com/skhoiriati1102/"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <img src="{{ asset('img/bilal.jpeg') }}" class="card-img-top" alt="Muhammad Bilal Al-Asy'ari">
+                <div class="card-body">
+                    <h6>Muhammad Bilal Al-Asy'ari</h6><br>
+                    <p>
+                        Teknik Informatika<br>
+                        STT Terpadu Nurul Fikri<br>
+                        <i class="fa-regular fa-envelope"></i> shiroe.kagamishi@gmail.com
+                    </p>
+                </div>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/muhammad-bilal-al-asy-ari-647b42214/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/shiroe2018"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.instagram.com/shiroe_shi/"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>

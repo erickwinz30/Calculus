@@ -20,12 +20,14 @@
             <section class="card">
                 <div class="row">
                     <div class="col-auto">
-                        <img class="profile-photo" src="{{ asset('profilePic/erickwinz30-jiwoni.jpg') }}" alt="foto profile">
+                        <img class="profile-photo" src="{{ asset('profilePic/'.Auth::user()->profile_pic) }}" alt="foto profile">
                     </div>
                     <div class="col mt-1">
-                        <p><b>Jang Gyu-Ri</b></p>
-                        Height: <br>
-                        Weight:
+                        @foreach ($height_weight as $row)
+                        <p><b>{{ $row->username }}</b></p>
+                        Height : {{ $row->height }} cm<br>
+                        Weight: {{ $row->weight }} kg
+                        @endforeach
                     </div>
                 </div>
             </section>
@@ -41,19 +43,22 @@
 
         <aside>
             <div class="card">
-                <form action="/Calculus/account/update" method="post" enctype="multipart/form-data">
+                <form action="/height-weight/update" method="post">
+                    @foreach ( $height_weight as $row)
+                    {{ csrf_field() }}
                     <div class="card-item mb-2">
                         <label for="formFile" class="form-label col-2"><b>My height</b></label>
-                        <input class="form-control" type="text" id="my-height" name="my-height">
+                        <input class="form-control" type="text" id="my-height" name="my-height" value="{{ $row->height }}">
                     </div>
                     <div class="card-item">
                         <label for="formFile" class="form-label col-2"><b>My weight</b></label>
-                        <input class="form-control" type="text" id="my-weight" name="my-weight">
+                        <input class="form-control" type="text" id="my-weight" name="my-weight" value="{{ $row->weight }}">
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button class="btn btn-cancel" type="submit" href="">Cancel</button>
                         <button class="btn btn-save" type="submit" value="add">Save</button>
                     </div>
+                    @endforeach
                 </form>
             </div>
         </aside>

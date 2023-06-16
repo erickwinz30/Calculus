@@ -42,13 +42,13 @@
                 <fieldset>
                     <label class="col-sm-2 col-form-label"><b>Sex</b></label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sex" id="laki-laki" value="laki-laki">
+                        <input class="form-check-input" type="radio" name="sex" id="laki-laki" value="Laki-laki">
                         <label class="form-check-label" for="sex">
                             Laki-laki
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sex" id="perempuan" value="perempuan">
+                        <input class="form-check-input" type="radio" name="sex" id="perempuan" value="Perempuan">
                         <label class="form-check-label" for="sex">
                             Perempuan
                         </label>
