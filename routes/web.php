@@ -25,6 +25,12 @@ Route::group(['middleware' => ['checkRole:client']], function () {
     Route::get('home', [ControllerMainPage::class, 'mainPage']);
     Route::post('/', [ControllerMainPage::class, 'mainPage'])->name('mainPage.date');
 
+    //searchFood
+    Route::get('addBreakfast/search/{foodName}', [ControllerFood::class, 'searchFood']);
+
+    //add Calorie
+    // Route::post('addBreakfast/save', [ControllerFood::class, 'addCalorie'])->name('addBreakfast.save');
+
     //list-food
     Route::get('add-food', function () {
         return view('add-food', [

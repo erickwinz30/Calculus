@@ -12,18 +12,22 @@ use Illuminate\Support\Facades\Log;
 class ModelFood extends Model
 {
     // use HasFactory;
+    public function searchFood($foodName) {
+        $searchResult = DB::table('list_food')
+        ->where('food_name', 'like', '%'.$foodName.'%')
+        ->get();
+
+        return $searchResult;
+    }
 
     public function addListFood($x) {
         $weight = $x['weight'];
-        $food_calories = $x['food_calories'] / $weight;
-        $cholesterol = $x['cholesterol'] / $weight;
-        $protein = $x['protein'] / $weight;
-        $carbohydrate = $x['carbohydrate'] / $weight;
-        $sodium = $x['sodium'] / $weight;
-        $sugar = $x['sugar'] / $weight;
-
-        $newWeight = 1;
-
+        $food_calories = $x['food_calories'];
+        $cholesterol = $x['cholesterol'];
+        $protein = $x['protein'];
+        $carbohydrate = $x['carbohydrate'];
+        $sodium = $x['sodium'];
+        $sugar = $x['sugar'];
 
         $list_food = DB::table('list_food')->insert([
             'id_list_food' => Str::random(10),
@@ -34,7 +38,7 @@ class ModelFood extends Model
             'carbohydrate' => $carbohydrate,
             'sodium' => $sodium,
             'sugar' => $sugar,
-            'weight' => $newWeight,
+            'weight' => $weight,
         ]);
     }
 }

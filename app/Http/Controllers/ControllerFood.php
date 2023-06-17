@@ -14,8 +14,18 @@ class ControllerFood extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function searchFood($query) {
-        $searchResult = $query;
+    public function searchFood($foodName) {
+        $searchResult = $foodName;
+
+        $xx = new ModelFood();
+        $searchResult = $xx->searchFood($searchResult);
+        $title = 'Add Calorie';
+
+        // $allFoodInfo = array_merge($searchResult, $title);
+
+        Log::info($searchResult);
+
+        return view('add-calorie-breakfast', compact('searchResult', 'title'));
     }
     
     public function addListFood(Request $x) {

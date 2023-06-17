@@ -39,7 +39,7 @@
 
                 <section class="card foodtime">
                     <div class="card-header">
-                        <a href="" class="col-10">Breakfast <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+                        <a href="addBreakfast" class="col-10">Breakfast <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
                         <label for="total-calories" class="col-2 d-grid justify-content-md-end">{{ round($breakfastCalorie->total_breakfast_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
@@ -54,7 +54,7 @@
 
                 <section class="card foodtime">
                     <div class="card-header">
-                        <a href="" class="col-10">Lunch <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+                        <a href="addLunch" class="col-10">Lunch <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
                         <label for="total-calories" class="col-2 d-grid justify-content-md-end">{{ round($lunchCalorie->total_lunch_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
@@ -69,7 +69,7 @@
 
                 <section class="card foodtime">
                     <div class="card-header">
-                        <a href="" class="col-10">Dinner <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+                        <a href="addDinner" class="col-10">Dinner <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
                         <label for="total-calories" class="col-2 d-grid justify-content-md-end">{{ round($dinnerCalorie->total_dinner_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
@@ -84,7 +84,7 @@
 
                 <section class="card foodtime">
                     <div class="card-header">
-                        <a href="" class="col-10">Snack <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+                        <a href="addSnack" class="col-10">Snack <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
                         <label for="total-calories" class="col-2 d-grid justify-content-md-end">{{ round($snackCalorie->total_snack_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
