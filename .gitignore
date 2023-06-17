@@ -1,11 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
-<<<<<<< HEAD
 /public/profilePic
-=======
-# /public/profilePic
->>>>>>> fc4fcad04a30eaa833ac482ba92840d3ff033ac5
 /storage/*.key
 /vendor
 .env
