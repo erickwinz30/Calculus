@@ -47,7 +47,7 @@ aside {
   border: none !important;
 }
 
-#search>.btn {
+.search-btn {
   background-color: #76DFB7;
   color: black;
   border: none;
@@ -57,7 +57,7 @@ aside {
   font-weight: bold;
 }
 
-#search>.btn:hover,
+.search-btn:hover,
 .delete-button:hover {
   color: white;
   opacity: 0.8;
@@ -120,17 +120,17 @@ h4 {
   font-weight: bold;
 }
 
-.card>.btn {
+.add-btn {
+  margin: auto;
+  padding: 5px 10px;
   background-color: #76DFB7;
   color: black;
   border: none;
   border-radius: 5px;
-  padding: 5px 10px;
-  margin: auto;
   font-weight: bold;
 }
 
-.card>.btn:hover {
+.add-btn:hover {
   background-color: #76DFB7;
   color: white;
   opacity: 0.8;
