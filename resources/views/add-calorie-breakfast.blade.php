@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/add-calorie.css') }}">
     <title>Calculus | Add Calorie</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
@@ -23,12 +22,11 @@
             <section id="search-container" class="card">
                 <form action="{{ url()->current() }}/search" id="search">
                     <input placeholder="Search Foods..." id="searchElement" name="search" type="search" class="form-control">
-                    <button id="searchButtonElement" class="btn" type="submit">Search</button>
+                    <button id="searchButtonElement" class="search-btn" type="submit">Search</button>
                 </form>
             </section>
             <section class="card" id="food-list">
-                <a href="" class="add">Add New Food <i class="fa-solid fa-circle-plus fa-lg"
-                        style="color: #76dfb7;"></i></a>
+                <a href="" class="add">Add New Food <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
                 <div class="food mb-3">
                     <div class="col-10">
                         <label class="input-name-list" data-name="Nasi Goreng">
@@ -70,15 +68,14 @@
                         {{ csrf_field() }}
 
                     </div>
-                    <button class="btn" type="submit">Add</button>
+                    <button class="add-btn d-md-flex justify-content-md-center" type="submit">Add</button>
                 </form>
             </div>
         </aside>
     </main>
     @include('layouts.footer')
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
 
     <script>

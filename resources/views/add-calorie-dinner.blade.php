@@ -22,7 +22,7 @@
             <section id="search-container" class="card">
                 <form action="" id="search">
                     <input placeholder="Search Foods..." id="searchElement" type="search" class="form-control">
-                    <button id="searchButtonElement" class="btn" type="submit">Search</button>
+                    <button id="searchButtonElement" class="search-btn" type="submit">Search</button>
                 </form>
             </section>
             <section class="card" id="food-list">
@@ -66,7 +66,7 @@
                 <div id="calorie-summary-list">
 
                 </div>
-                <button class="btn" type="submit">Add</button>
+                <button class="add-btn d-md-flex justify-content-md-center" type="submit">Add</button>
             </div>
         </aside>
     </main>
