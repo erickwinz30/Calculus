@@ -40,7 +40,7 @@
                     <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" placeholder="Select a date">
                 </div>
                 <fieldset>
-                    <label class="col-sm-2 col-form-label"><b>Sex</b></label>
+                    <label class="col-sm-2 col-form-label"><b>Gender</b></label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="sex" id="laki-laki" value="Laki-laki">
                         <label class="form-check-label" for="sex">

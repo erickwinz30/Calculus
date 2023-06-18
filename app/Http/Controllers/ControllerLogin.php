@@ -41,6 +41,7 @@ class ControllerLogin extends BaseController
     }
     public function postregistrasi(Request $x)
     {
+        $profile_pic = 'avatar.png';
         $data = $x->all();
         User::create([
             'username' => $data['username'],
@@ -49,6 +50,7 @@ class ControllerLogin extends BaseController
             'name' => $data['name'],
             'sex' => $data['sex'],
             'date_of_birth' => $data['date_of_birth'],
+            'profile_pic' => $profile_pic,
             'role' => 'client'
         ]);
         return redirect("login")
