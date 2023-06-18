@@ -44,13 +44,23 @@ class ModelAccount extends Model
 
         $x->file('profile_pic')->move('profilePic/', $profile_pic_name);
 
-        $account = DB::table('users')->where('username', Auth::user()->username)->update([
-            'profile_pic' => $profile_pic_name,
-            'sex' => $x['sex'],
-            'date_of_birth' => $x['date_of_birth'],
-            'email'=>$x['email'],
-            'password'=>$x['password'],
-        ]);
+        if ($x['password']) {
+            $account = DB::table('users')->where('username', Auth::user()->username)->update([
+                'profile_pic' => $profile_pic_name,
+                'sex' => $x['sex'],
+                'date_of_birth' => $x['date_of_birth'],
+                'email'=>$x['email'],
+                'password'=>$x['password'],
+            ]);
+        } else {
+            $account = DB::table('users')->where('username', Auth::user()->username)->update([
+                'profile_pic' => $profile_pic_name,
+                'sex' => $x['sex'],
+                'date_of_birth' => $x['date_of_birth'],
+                'email'=>$x['email'],
+            ]);
+        }
+        
         
         $this->updateBMR();
     }
