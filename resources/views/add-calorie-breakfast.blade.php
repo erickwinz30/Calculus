@@ -27,8 +27,9 @@
                     <button id="searchButtonElement" class="search-btn" type="submit">Search</button>
                 </div>
             </section>
-            <a href="{{ url('add-food') }}" class="add">Add New Food <i class="fa-solid fa-circle-plus fa-lg"
-                    style="color: #76dfb7;"></i></a>
+            <section class="card">
+                <a href="{{ url('add-food') }}" class="add">Add New Food <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+            </section>
             <section class="card d-none" id="food-list">
 
             </section>
