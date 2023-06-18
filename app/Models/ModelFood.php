@@ -274,4 +274,28 @@ class ModelFood extends Model
             'weight' => $updatedWeight,
         ]);
     }
+
+    public function deleteBreakfastInfo($id_food) {
+        $deleteBreakfast = DB::table('breakfast')->where('id_food', $id_food)->delete();
+
+        $deleteFood = DB::table('food')->where('id_food', $id_food)->delete();
+    }   
+
+    public function deleteLunchInfo($id_food) {
+        $deleteBreakfast = DB::table('lunch')->where('id_food', $id_food)->delete();
+
+        $deleteFood = DB::table('food')->where('id_food', $id_food)->delete();
+    }  
+
+    public function deleteDinnerInfo($id_food) {
+        $deleteBreakfast = DB::table('dinner')->where('id_food', $id_food)->delete();
+
+        $deleteFood = DB::table('food')->where('id_food', $id_food)->delete();
+    }  
+
+    public function deleteSnackInfo($id_food) {
+        $deleteBreakfast = DB::table('snack')->where('id_food', $id_food)->delete();
+
+        $deleteFood = DB::table('food')->where('id_food', $id_food)->delete();
+    }  
 }

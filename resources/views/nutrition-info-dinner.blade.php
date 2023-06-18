@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/nutrition-info.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
     <title>Calculus | {{ $title }}</title>
 </head>
 
@@ -70,12 +71,31 @@
                         <p class="col-sm-1">gr</p>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-remove" type="button">Remove</button>
+                        <button class="btn btn-remove" type="button" onclick="deleteItem('{{ $row->id_food }}')">Remove</button>
                         <button class="btn btn-save" type="submit">Save</button>
                     </div>
                 @endforeach
         </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <script>
+        function deleteItem(id) {
+            Swal.fire({
+                title: 'Confirmation',
+                text: 'Anda yakin ingin menghapusnya?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya, hapus!',
+                cancelButtonText: 'Tidak, batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    var form = document.getElementById('nutrition-info');
+                    form.action = "{{ url('nutrition-info/dinner') }}/" + id + "/delete";
+                    form.submit();
+                }
+            });
+        }
+    </script>
     @include('layouts.footer')
 </body>
 
