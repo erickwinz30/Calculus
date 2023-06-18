@@ -25,8 +25,10 @@
                     <button id="searchButtonElement" class="search-btn" type="submit">Search</button>
                 </form>
             </section>
-            <section class="card" id="food-list">
+            <section class="card">
                 <a href="" class="add">Add New Food <i class="fa-solid fa-circle-plus fa-lg" style="color: #76dfb7;"></i></a>
+            </section>
+            <section class="card" id="food-list">
                 <div class="food mb-3">
                     <div class="col-10">
                         <label class="input-name-list" data-name="Nasi Goreng">

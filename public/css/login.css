@@ -26,7 +26,7 @@ input[type=password] {
     box-sizing: border-box;
 }
 
-.buttons {
+.button {
     display: flex;
 }
 
@@ -60,4 +60,16 @@ img.logo {
 
 .container h3 {
     text-align: center;
+}
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 768px) {
+    .imgcontainer {
+        display: none;
+    }
+
+    .container {
+        width: auto;
+    }
 }
