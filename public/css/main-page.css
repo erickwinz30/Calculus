@@ -106,8 +106,7 @@ span {
     opacity: 0.8;
 }
 
-/* Responsive Adjustments */
-
+/*Mobile Responsive*/
 @media only screen and (max-width: 768px) {
     main {
         margin: 10px;
@@ -119,17 +118,43 @@ span {
     }
 
     aside {
+        width: 50%;
         float: none;
+        margin: auto;
     }
 
     .card,
-    .time,
     .nutrition {
         margin: 10px;
     }
 
-    .nutrition {
-        max-width: none;
+    .change-date {
+        display: flex;
+        flex-direction: column;
     }
 
+    #form-date {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .change-date {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form-date {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: 10px;
+    }
+
+    .calorie-info>.py-2 {
+        margin-left: -10px;
+    }
 }

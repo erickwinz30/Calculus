@@ -42,7 +42,7 @@
         </div>
 
         <aside>
-            <div class="card">
+            <div class="card data">
                 <form action="/account/update" method="post" enctype="multipart/form-data">
                     @foreach ($account as $row)
                     {{ csrf_field() }}
@@ -60,13 +60,15 @@
                     </div>
                     <div class="card-item">
                         <label class="col-2"><b>Gender</b></label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sex" checked>
-                            <label class="form-check-label">Laki-laki</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sex">
-                            <label class="form-check-label">Perempuan</label>
+                        <div class="gender">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sex" checked>
+                                <label class="form-check-label">Laki-laki</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sex">
+                                <label class="form-check-label">Perempuan</label>
+                            </div>
                         </div>
                     </div>
                     <div class="card-item">

@@ -28,9 +28,8 @@
                 <label for="password"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
 
-                <div class="buttons">
-                    <button type="button" name="register"
-                        onclick="window.location.href='registrasi'">Register</button>
+                <div class="button">
+                    <button type="button" name="register" onclick="window.location.href='registrasi'">Register</button>
                     <button type="submit" name="kirim" value="kirim">Login</button>
                 </div>
             </form>

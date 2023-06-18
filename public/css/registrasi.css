@@ -24,6 +24,12 @@ form {
     color: white !important;
 }
 
+.button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .imgcontainer {
     margin: auto;
 }
@@ -38,4 +44,21 @@ img.logo {
 
 .container h3 {
     text-align: center;
+}
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 768px) {
+    #register {
+        margin: auto;
+        top: 55%;
+    }
+
+    .imgcontainer {
+        display: none;
+    }
+
+    .container {
+        width: auto;
+    }
 }
