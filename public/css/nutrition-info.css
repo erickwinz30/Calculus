@@ -23,7 +23,7 @@ html {
 
 form {
     width: 50%;
-    height: 50%;
+    height: 60%;
 }
 
 .back {
@@ -60,4 +60,23 @@ form {
 .btn:hover {
     opacity: 0.8;
     color: white;
+}
+
+/*Mobile Responsive*/
+
+@media only screen and (max-width: 768px) {
+    form {
+        width: 60%;
+        height: 60%;
+    }
+
+    .btn {
+        margin: 10px auto 50px auto;
+    }
+}
+
+@media only screen and (max-width: 483px) {
+    form {
+        height: 40%;
+    }
 }

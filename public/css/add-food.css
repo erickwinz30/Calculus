@@ -15,7 +15,7 @@ html {
 }
 
 .title {
-    margin-top: 20px;
+    margin: 20px;
     text-align: center;
     color: #76DFB7;
 }
@@ -26,7 +26,7 @@ html {
 
 #add-food {
     left: 50%;
-    top: 50%;
+    top: 45%;
     position: absolute;
     transform: translate(-50%, -50%);
 }
@@ -34,6 +34,7 @@ html {
 form {
     width: 50%;
     height: 50%;
+    margin-top: 25px;
 }
 
 .btn-cancel {
@@ -59,4 +60,23 @@ form {
 .btn:hover {
     opacity: 0.8;
     color: white;
+}
+
+/*Mobile Responsive*/
+
+@media only screen and (max-width: 768px) {
+    form {
+        width: 60%;
+        height: 45%;
+    }
+
+    .btn {
+        margin: 10px auto 50px auto;
+    }
+}
+
+@media only screen and (max-width: 483px) {
+    form {
+        height: 20%;
+    }
 }
