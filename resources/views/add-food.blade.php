@@ -38,6 +38,12 @@
                 </div>
             </div>
             <div class="row mb-2">
+                <label for="fat" class="col-sm-4 col-form-label">Fat</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="fat" name="fat">
+                </div>
+            </div>
+            <div class="row mb-2">
                 <label for="protein" class="col-sm-4 col-form-label">Protein</label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="protein" name="protein">

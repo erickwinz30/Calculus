@@ -21,11 +21,33 @@ class ControllerFood extends BaseController
         $searchResult = $xx->searchFood($searchResult);
         $title = 'Add Calorie';
 
-        // $allFoodInfo = array_merge($searchResult, $title);
-
         Log::info($searchResult);
 
-        return view('add-calorie-breakfast', compact('searchResult', 'title'));
+        return compact('searchResult', 'title');
+    }
+
+    public function addCalorieBreakfast(Request $x) {
+        Log::info($x);
+        $xx = new ModelFood();
+        $xx->addCalorieBreakfast($x);
+    }
+
+    public function addCalorieLunch(Request $x) {
+        Log::info($x);
+        $xx = new ModelFood();
+        $xx->addCalorieLunch($x);
+    }
+
+    public function addCalorieDinner(Request $x) {
+        Log::info($x);
+        $xx = new ModelFood();
+        $xx->addCalorieDinner($x);
+    }
+
+    public function addCalorieSnack(Request $x) {
+        Log::info($x);
+        $xx = new ModelFood();
+        $xx->addCalorieSnack($x);
     }
     
     public function addListFood(Request $x) {
@@ -33,6 +55,7 @@ class ControllerFood extends BaseController
             'food_name' => 'required|min:2|max:30',
             'food_calories' => 'required|numeric',
             'cholesterol' => 'required|numeric',
+            'fat' => 'required|numeric',
             'protein' => 'required|numeric',
             'carbohydrate' => 'required|numeric',
             'sodium' => 'required|numeric',
@@ -41,6 +64,23 @@ class ControllerFood extends BaseController
         ]);
         $xx = new ModelFood();
         $xx->addListFood($x);
+        return redirect('/home');
+    }
+
+    public function nutritionInfo($id_food) {
+        $x = new ModelFood();
+        $foodInfo['foodInfo'] = $x->getFoodInfo($id_food);
+        $title['title'] = 'Nutrition Information';
+
+        $allNutritionInfo = array_merge($foodInfo, $title);
+        return view('nutrition-info', $allNutritionInfo);
+    }
+
+    public function updateFoodInfo(Request $req, $id_food) {
+        // Log::info([$req, $id_food]);
+        $xx = new ModelFood();
+        $xx->updateFoodInfo($req, $id_food);
+
         return redirect('/home');
     }
 }

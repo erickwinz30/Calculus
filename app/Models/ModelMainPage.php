@@ -17,7 +17,7 @@ class ModelMainPage extends Model
 
         $breakfast = DB::table('breakfast')
             ->join('food', 'breakfast.id_food', '=', 'food.id_food')
-            ->select('food.food_name', 'food.food_calories', 'food.weight')
+            ->select('food.id_food','food.food_name', 'food.food_calories', 'food.weight')
             ->where('breakfast.id', $id)
             ->where('breakfast.date', $date)
             ->get();

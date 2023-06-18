@@ -15,48 +15,57 @@
         @include('layouts.navbar')
     </header>
     <main>
-        <form id="nutrition-info">
-            <a class="back" href="">
+        <form id="nutrition-info" action="{{ url()->current() }}/update" method="POST">
+            {{ csrf_field() }}
+            <a class="back" href="{{ url('/') }}">
                 < Kembali</a><br><br>
-                    <p class="food-name"><b>Nasi Goreng</b></p>
+                @foreach ($foodInfo as $row)
+                    <p class="food-name"><b>{{ $row->food_name }}</b></p>
                     <div class="row mb-2">
                         <label for="calories" class="col-sm-4 col-form-label">Calories</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="calories">
+                            <input type="text" class="form-control" id="calories" disabled value="{{ round($row->food_calories) }}">
                         </div>
                     </div>
                     <div class="row mb-2">
                         <label for="cholesterol" class="col-sm-4 col-form-label">Cholesterol</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="cholesterol" disabled>
+                            <input type="text" class="form-control" id="cholesterol" disabled value="{{ round($row->cholesterol) }}">
                         </div>
                         <p class="col-sm-1">gr</p>
                     </div>
                     <div class="row mb-2">
                         <label for="protein" class="col-sm-4 col-form-label">Protein</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="protein" disabled>
+                            <input type="text" class="form-control" id="protein" disabled value="{{ round($row->protein) }}">
                         </div>
                         <p class="col-sm-1">gr</p>
                     </div>
                     <div class="row mb-2">
                         <label for="carbohydrate" class="col-sm-4 col-form-label">Carbohydrate</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="carbohydrate" disabled>
+                            <input type="text" class="form-control" id="carbohydrate" disabled value="{{ round($row->carbohydrate) }}">
                         </div>
                         <p class="col-sm-1">gr</p>
                     </div>
                     <div class="row mb-2">
                         <label for="sodium" class="col-sm-4 col-form-label">Sodium</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="sodium" disabled>
+                            <input type="text" class="form-control" id="sodium" disabled value="{{ round($row->sodium) }}">
                         </div>
                         <p class="col-sm-1">gr</p>
                     </div>
                     <div class="row mb-2">
                         <label for="sugar" class="col-sm-4 col-form-label">Sugar</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="sugar" disabled>
+                            <input type="text" class="form-control" id="sugar" disabled value="{{ round($row->sugar) }}">
+                        </div>
+                        <p class="col-sm-1">gr</p>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="weight" class="col-sm-4 col-form-label">Weight</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="weight" name="weight" value="{{ round($row->weight) }}">
                         </div>
                         <p class="col-sm-1">gr</p>
                     </div>
@@ -64,6 +73,7 @@
                         <button class="btn btn-remove" type="button">Remove</button>
                         <button class="btn btn-save" type="submit">Save</button>
                     </div>
+                @endforeach
         </form>
     </main>
     @include('layouts.footer')
