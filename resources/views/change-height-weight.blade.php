@@ -42,7 +42,7 @@
         </div>
 
         <aside>
-            <div class="card">
+            <div class="card data">
                 <form action="/height-weight/update" method="post">
                     @foreach ( $height_weight as $row)
                     {{ csrf_field() }}
@@ -54,8 +54,8 @@
                         <label for="formFile" class="form-label col-2"><b>My weight</b></label>
                         <input class="form-control" type="text" id="my-weight" name="my-weight" value="{{ $row->weight }}">
                     </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-cancel" type="submit" href="">Cancel</button>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end button">
+                        <button class="btn btn-cancel" type="button" onclick="window.location.href='account'">Cancel</button>
                         <button class="btn btn-save" type="submit" value="add">Save</button>
                     </div>
                     @endforeach
