@@ -61,11 +61,11 @@
                     <div class="card-item">
                         <label class="col-2"><b>Gender</b></label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sex" checked>
+                            <input class="form-check-input" type="radio" name="sex" id="laki-laki" value="Laki-laki">
                             <label class="form-check-label">Laki-laki</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sex">
+                            <input class="form-check-input" type="radio" name="sex" id="perempuan" value="Perempuan">
                             <label class="form-check-label">Perempuan</label>
                         </div>
                     </div>
