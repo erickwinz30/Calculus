@@ -27,9 +27,15 @@ Route::group(['middleware' => ['checkRole:client']], function () {
 
     //searchFood
     Route::get('addBreakfast/search/{foodName}', [ControllerFood::class, 'searchFood']);
+    Route::get('addLunch/search/{foodName}', [ControllerFood::class, 'searchFood']);
+    Route::get('addDinner/search/{foodName}', [ControllerFood::class, 'searchFood']);
+    Route::get('addSnack/search/{foodName}', [ControllerFood::class, 'searchFood']);
 
     //add Calorie
-    // Route::post('addBreakfast/save', [ControllerFood::class, 'addCalorie'])->name('addBreakfast.save');
+    Route::post('addBreakfast/save', [ControllerFood::class, 'addCalorieBreakfast'])->name('addBreakfast.save');
+    Route::post('addLunch/save', [ControllerFood::class, 'addCalorieLunch'])->name('addLunch.save');
+    Route::post('addDinner/save', [ControllerFood::class, 'addCalorieDinner'])->name('addDinner.save');
+    Route::post('addSnack/save', [ControllerFood::class, 'addCalorieSnack'])->name('addSnack.save');
 
     //list-food
     Route::get('add-food', function () {
@@ -71,11 +77,9 @@ Route::group(['middleware' => ['checkRole:client']], function () {
     Route::get('change-height-weight', [ControllerAccountInfo::class, 'getHeightWeight']);
     Route::post('height-weight/update', [ControllerAccountInfo::class, 'updateHeightWeight']);
 
-    Route::get('nutrition-info', function () {
-        return view('nutrition-info', [
-            'title' => 'Nutrition Information'
-        ]);
-    });
+    //nutrition-info
+    Route::get('nutrition-info/{id_food}', [ControllerFood::class, 'nutritionInfo']);
+    Route::post('nutrition-info/{id_food}/update', [ControllerFood::class, 'updateFoodInfo']);
 
     Route::get('health-tips', function () {
         return view('healthtips', [

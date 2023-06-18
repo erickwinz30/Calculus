@@ -43,12 +43,12 @@
                         <label for="total-calories" class="col-2 d-grid justify-content-md-end">{{ round($breakfastCalorie->total_breakfast_calorie ) }} Cals</label>
                     </div>
                     <div class="card-body">
+                        @foreach ($breakfast as $row)
                         <div class="food-detail">
-                            @foreach ($breakfast as $row)
-                            <a href="" class="col-10">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></a>
-                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories, 1) }} Cals</label>
-                            @endforeach
+                            <a href="nutrition-info/{{ $row->id_food }}" class="col-10">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></a>
+                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories) }} Cals</label>
                         </div>
+                        @endforeach
                     </div>
                 </section>
 
@@ -61,7 +61,7 @@
                         @foreach ($lunch as $row)
                         <div class="food-detail">
                             <a href="" class="col-10">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></a>
-                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories, 1) }} Cals</label>
+                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories) }} Cals</label>
                         </div>
                         @endforeach
                     </div>
@@ -76,7 +76,7 @@
                         @foreach ($dinner as $row)
                         <div class="food-detail">
                             <a href="" class="col-10">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></a>
-                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories, 1) }} Cals</label>
+                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories) }} Cals</label>
                         </div>
                         @endforeach
                     </div>
@@ -91,7 +91,7 @@
                         @foreach ($snack as $row)
                         <div class="food-detail">
                             <a href="" class="col-10">{{ $row->food_name }} <span>({{ round($row->weight, 1) }} gr)</span></a>
-                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories, 1) }} Cals</label>
+                            <label for="amount-of-calories" class="d-grid justify-content-md-end col-2">{{ round($row->food_calories) }} Cals</label>
                         </div>
                         @endforeach
                     </div>
