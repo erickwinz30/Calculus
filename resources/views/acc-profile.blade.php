@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ asset('css/Acc-page.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
     <title>Calculus | Profile</title>
 </head>
 
@@ -62,11 +63,11 @@
                         <label class="col-2"><b>Gender</b></label>
                         <div class="gender">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="sex" checked>
+                                <input class="form-check-input" type="radio" name="sex" id="laki-laki" value="Laki-laki">
                                 <label class="form-check-label">Laki-laki</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="sex">
+                                <input class="form-check-input" type="radio" name="sex" id="perempuan" value="Perempuan">
                                 <label class="form-check-label">Perempuan</label>
                             </div>
                         </div>
@@ -84,7 +85,7 @@
                         <input type="password" class="form-control" name="password">
                     </div>
                     <div class="d-grid justify-content-md-end">
-                        <button class="btn-save" type="submit" value="add">Save</button>
+                        <button class="btn-save" type="submit" value="add" onclick="updateItem()">Save</button>
                     </div>
                     @endforeach
                 </form>
@@ -92,6 +93,26 @@
             </div>
         </aside>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <script>
+        function updateItem() {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Confirmation',
+                text: 'Anda yakin ingin update data?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya, update!',
+                cancelButtonText: 'Tidak, batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    var form = document.querySelector('form[action="/account/update"]');
+                    form.submit();
+                }
+            });
+        }
+    </script>
     @include('layouts.footer')
 </body>
 

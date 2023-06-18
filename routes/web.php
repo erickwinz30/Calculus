@@ -78,8 +78,20 @@ Route::group(['middleware' => ['checkRole:client']], function () {
     Route::post('height-weight/update', [ControllerAccountInfo::class, 'updateHeightWeight']);
 
     //nutrition-info
-    Route::get('nutrition-info/{id_food}', [ControllerFood::class, 'nutritionInfo']);
-    Route::post('nutrition-info/{id_food}/update', [ControllerFood::class, 'updateFoodInfo']);
+    Route::get('nutrition-info/breakfast/{id_food}', [ControllerFood::class, 'nutritionInfoBreakfast']);
+    Route::get('nutrition-info/lunch/{id_food}', [ControllerFood::class, 'nutritionInfoLunch']);
+    Route::get('nutrition-info/dinner/{id_food}', [ControllerFood::class, 'nutritionInfoDinner']);
+    Route::get('nutrition-info/snack/{id_food}', [ControllerFood::class, 'nutritionInfoSnack']);
+
+    Route::post('nutrition-info/breakfast/{id_food}/update', [ControllerFood::class, 'updateFoodInfo']);
+    Route::post('nutrition-info/lunch/{id_food}/update', [ControllerFood::class, 'updateFoodInfo']);
+    Route::post('nutrition-info/dinner/{id_food}/update', [ControllerFood::class, 'updateFoodInfo']);
+    Route::post('nutrition-info/snack/{id_food}/update', [ControllerFood::class, 'updateFoodInfo']);
+
+    Route::post('nutrition-info/breakfast/{id_food}/delete', [ControllerFood::class, 'deleteBreakfastInfo']);
+    Route::post('nutrition-info/lunch/{id_food}/delete', [ControllerFood::class, 'deleteLunchInfo']);
+    Route::post('nutrition-info/dinner/{id_food}/delete', [ControllerFood::class, 'deleteDinnerInfo']);
+    Route::post('nutrition-info/snack/{id_food}/delete', [ControllerFood::class, 'deleteSnackInfo']);
 
     Route::get('health-tips', function () {
         return view('healthtips', [

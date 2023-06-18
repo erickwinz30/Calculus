@@ -67,19 +67,78 @@ class ControllerFood extends BaseController
         return redirect('/home');
     }
 
-    public function nutritionInfo($id_food) {
+    public function nutritionInfoBreakfast($id_food) {
         $x = new ModelFood();
         $foodInfo['foodInfo'] = $x->getFoodInfo($id_food);
         $title['title'] = 'Nutrition Information';
 
         $allNutritionInfo = array_merge($foodInfo, $title);
-        return view('nutrition-info', $allNutritionInfo);
+        return view('nutrition-info-breakfast', $allNutritionInfo);
+    }
+
+    public function nutritionInfoLunch($id_food) {
+        $x = new ModelFood();
+        $foodInfo['foodInfo'] = $x->getFoodInfo($id_food);
+        $title['title'] = 'Nutrition Information';
+
+        $allNutritionInfo = array_merge($foodInfo, $title);
+        return view('nutrition-info-lunch', $allNutritionInfo);
+    }
+
+    public function nutritionInfoDinner($id_food) {
+        $x = new ModelFood();
+        $foodInfo['foodInfo'] = $x->getFoodInfo($id_food);
+        $title['title'] = 'Nutrition Information';
+
+        $allNutritionInfo = array_merge($foodInfo, $title);
+        return view('nutrition-info-dinner', $allNutritionInfo);
+    }
+
+    public function nutritionInfoSnack($id_food) {
+        $x = new ModelFood();
+        $foodInfo['foodInfo'] = $x->getFoodInfo($id_food);
+        $title['title'] = 'Nutrition Information';
+
+        $allNutritionInfo = array_merge($foodInfo, $title);
+        return view('nutrition-info-snack', $allNutritionInfo);
     }
 
     public function updateFoodInfo(Request $req, $id_food) {
         // Log::info([$req, $id_food]);
         $xx = new ModelFood();
         $xx->updateFoodInfo($req, $id_food);
+
+        return redirect('/home');
+    }
+
+    public function deleteBreakfastInfo($id_food) {
+        // Log::info([$req, $id_food]);
+        $xx = new ModelFood();
+        $xx->deleteBreakfastInfo($id_food);
+
+        return redirect('/home');
+    }
+
+    public function deleteLunchInfo($id_food) {
+        // Log::info([$req, $id_food]);
+        $xx = new ModelFood();
+        $xx->deleteLunchInfo($id_food);
+
+        return redirect('/home');
+    }
+
+    public function deleteDinnerInfo($id_food) {
+        // Log::info([$req, $id_food]);
+        $xx = new ModelFood();
+        $xx->deleteDinnerInfo($id_food);
+
+        return redirect('/home');
+    }
+
+    public function deleteSnackInfo($id_food) {
+        // Log::info([$req, $id_food]);
+        $xx = new ModelFood();
+        $xx->deleteSnackInfo($id_food);
 
         return redirect('/home');
     }

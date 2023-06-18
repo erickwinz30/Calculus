@@ -44,7 +44,7 @@ class ModelMainPage extends Model
 
         $lunch = DB::table('lunch')
             ->join('food', 'lunch.id_food', '=', 'food.id_food')
-            ->select('food.food_name', 'food.food_calories', 'food.weight')
+            ->select('food.id_food', 'food.food_name', 'food.food_calories', 'food.weight')
             ->where('lunch.id', $id)
             ->where('lunch.date', $date)
             ->get();
@@ -71,7 +71,7 @@ class ModelMainPage extends Model
 
         $dinner = DB::table('dinner')
             ->join('food', 'dinner.id_food', '=', 'food.id_food')
-            ->select('food.food_name', 'food.food_calories', 'food.weight')
+            ->select('food.id_food', 'food.food_name', 'food.food_calories', 'food.weight')
             ->where('dinner.id', $id)
             ->where('dinner.date', $date)
             ->get();
@@ -98,7 +98,7 @@ class ModelMainPage extends Model
 
         $snack = DB::table('snack')
             ->join('food', 'snack.id_food', '=', 'food.id_food')
-            ->select('food.food_name', 'food.food_calories', 'food.weight')
+            ->select('food.id_food', 'food.food_name', 'food.food_calories', 'food.weight')
             ->where('snack.id', $id)
             ->where('snack.date', $date)
             ->get();
