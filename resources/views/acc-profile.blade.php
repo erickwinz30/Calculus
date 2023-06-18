@@ -63,11 +63,11 @@
                         <label class="col-2"><b>Gender</b></label>
                         <div class="gender">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="sex" id="laki-laki" value="Laki-laki">
+                                <input class="form-check-input" type="radio" name="sex" id="laki-laki" value="Laki-laki" {{ $row->sex === 'Laki-laki' ? 'checked' : '' }}>
                                 <label class="form-check-label">Laki-laki</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="sex" id="perempuan" value="Perempuan">
+                                <input class="form-check-input" type="radio" name="sex" id="perempuan" value="Perempuan" {{ $row->sex === 'Perempuan' ? 'checked' : '' }}>
                                 <label class="form-check-label">Perempuan</label>
                             </div>
                         </div>
