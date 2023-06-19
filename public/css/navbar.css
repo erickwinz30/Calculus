@@ -52,3 +52,9 @@
         flex-direction: column;
     }
 }
+
+@media only screen and (max-width: 386px) {
+    a {
+        font-size: 14px;
+    }
+}

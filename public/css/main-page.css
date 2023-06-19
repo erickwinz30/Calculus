@@ -128,6 +128,12 @@ span {
         margin: 10px;
     }
 
+    .nutrition {
+        bottom: 20px;
+        padding-right: 50px;
+        margin-left: -50px;
+    }
+
     .change-date {
         display: flex;
         flex-direction: column;
@@ -138,6 +144,10 @@ span {
         flex-direction: row;
         margin: auto;
         gap: 10px;
+    }
+
+    footer {
+        display: none;
     }
 }
 
@@ -156,5 +166,10 @@ span {
 
     .calorie-info>.py-2 {
         margin-left: -10px;
+    }
+
+    .nutrition {
+        width: max-content;
+        padding: auto;
     }
 }
