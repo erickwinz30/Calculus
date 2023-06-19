@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="dicoding:email" content="f124xb428@dicoding.org">
+        <meta name="dicoding:email" content="f.purnamaaji@gmail.com">
 
 
         <title>Laravel</title>
