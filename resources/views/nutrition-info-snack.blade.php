@@ -71,7 +71,7 @@
                         <p class="col-sm-1">gr</p>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-remove" type="button">Remove</button>
+                        <button class="btn btn-remove" type="button" onclick="deleteItem('{{ $row->id_food }}')">Remove</button>
                         <button class="btn btn-save" type="submit">Save</button>
                     </div>
                 @endforeach
