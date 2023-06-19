@@ -8,8 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="{{ asset('css/add-calorie.css') }}">
     <title>Calculus | Add Calorie</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
@@ -23,8 +22,7 @@
         <div id="content">
             <section id="search-container" class="card">
                 <div id="search">
-                    <input placeholder="Search Foods..." id="searchElement" name="search" type="search"
-                        class="form-control">
+                    <input placeholder="Search Foods..." id="searchElement" name="search" type="search" class="form-control">
                     <button id="searchButtonElement" class="search-btn" type="submit">Search</button>
                 </div>
             </section>
@@ -45,16 +43,14 @@
                     {{-- {{ csrf_field() }} --}}
                     <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}" />
                     <div id="calorie-summary-list"></div>
-                    <button class="add-btn d-md-flex justify-content-md-center" type="submit"
-                        id="submitSummary">Add</button>
+                    <button class="add-btn d-flex justify-content-md-center" type="submit" id="submitSummary">Add</button>
                 </div>
             </div>
         </aside>
     </main>
     @include('layouts.footer')
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -148,6 +144,7 @@
             const row = elem;
             deleteRow(row);
         }
+
         function deleteRow(row) {
             row.remove();
         };

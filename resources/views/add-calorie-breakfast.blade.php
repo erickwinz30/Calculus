@@ -22,8 +22,7 @@
         <div id="content">
             <section id="search-container" class="card">
                 <div id="search">
-                    <input placeholder="Search Foods..." id="searchElement" name="search" type="search"
-                        class="form-control">
+                    <input placeholder="Search Foods..." id="searchElement" name="search" type="search" class="form-control">
                     <button id="searchButtonElement" class="search-btn" type="submit">Search</button>
                 </div>
             </section>
@@ -44,8 +43,7 @@
                     {{-- {{ csrf_field() }} --}}
                     <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}" />
                     <div id="calorie-summary-list"></div>
-                    <button class="add-btn d-md-flex justify-content-md-center" type="submit"
-                        id="submitSummary">Add</button>
+                    <button class="add-btn d-flex justify-content-md-center" type="submit" id="submitSummary">Add</button>
                 </div>
             </div>
         </aside>
@@ -146,6 +144,7 @@
             const row = elem;
             deleteRow(row);
         }
+
         function deleteRow(row) {
             row.remove();
         };

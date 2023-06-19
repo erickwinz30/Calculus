@@ -20,7 +20,7 @@
             {{ csrf_field() }}
             <a class="back" href="{{ url('/') }}">
                 < Kembali</a><br><br>
-                @foreach ($foodInfo as $row)
+                    @foreach ($foodInfo as $row)
                     <p class="food-name"><b>{{ $row->food_name }}</b></p>
                     <div class="row mb-2">
                         <label for="calories" class="col-sm-4 col-form-label">Calories</label>
@@ -70,11 +70,11 @@
                         </div>
                         <p class="col-sm-1">gr</p>
                     </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <div class="gap-2 d-flex justify-content-md-end">
                         <button class="btn btn-remove" type="button" onclick="deleteItem('{{ $row->id_food }}')">Remove</button>
                         <button class="btn btn-save" type="submit">Save</button>
                     </div>
-                @endforeach
+                    @endforeach
         </form>
     </main>
 
