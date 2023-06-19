@@ -15,7 +15,7 @@
             <li class="nav-item">
                 <a class="nav-link {{ ($title === 'About Us') ? 'active' : '' }}" href="/aboutus">About Us</a>
             </li>
-            <a class="avatar" href="account">
+            <a class="avatar" href="/account">
                 <img src="{{ asset('profilePic/'.Auth::user()->profile_pic) }}" alt="Profile picture" />
             </a>
         </ul>
