@@ -123,4 +123,8 @@ aside {
     .btn-save {
         margin: auto;
     }
+
+    footer {
+        display: none;
+    }
 }

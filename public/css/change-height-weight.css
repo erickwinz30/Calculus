@@ -134,4 +134,8 @@ aside {
     .btn {
         margin-left: 10px;
     }
+
+    footer {
+        display: none;
+    }
 }

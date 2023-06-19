@@ -104,6 +104,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    footer {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 570px) {

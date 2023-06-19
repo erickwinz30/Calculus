@@ -145,4 +145,8 @@ h4 {
     float: none;
     margin: auto;
   }
+
+  footer {
+    display: none;
+  }
 }
