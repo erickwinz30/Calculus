@@ -23,6 +23,7 @@ class ModelAccount extends Model
     public function updateAccount($x) {
         if($x['password']) {
             $account = DB::table('users')->where('username', Auth::user()->username)->update([
+                'name' => $x['name'],
                 'sex' => $x['sex'],
                 'date_of_birth' => $x['date_of_birth'],
                 'email'=>$x['email'],
@@ -31,6 +32,7 @@ class ModelAccount extends Model
             $this->updateBMR();
         } else {
             $account = DB::table('users')->where('username', Auth::user()->username)->update([
+                'name' => $x['name'],
                 'sex' => $x['sex'],
                 'date_of_birth' => $x['date_of_birth'],
                 'email'=>$x['email'],
@@ -46,6 +48,7 @@ class ModelAccount extends Model
 
         if ($x['password']) {
             $account = DB::table('users')->where('username', Auth::user()->username)->update([
+                'name' => $x['name'],
                 'profile_pic' => $profile_pic_name,
                 'sex' => $x['sex'],
                 'date_of_birth' => $x['date_of_birth'],
@@ -54,6 +57,7 @@ class ModelAccount extends Model
             ]);
         } else {
             $account = DB::table('users')->where('username', Auth::user()->username)->update([
+                'name' => $x['name'],
                 'profile_pic' => $profile_pic_name,
                 'sex' => $x['sex'],
                 'date_of_birth' => $x['date_of_birth'],

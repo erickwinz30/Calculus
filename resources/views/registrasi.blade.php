@@ -56,7 +56,7 @@
                 </fieldset>
                 <div class="mt-2 button">
                     <div>
-                        <button class="btn btn-primary" type="button" onclick="window.location.href='http://127.0.0.1:8000/login'">Back</button>
+                        <button class="btn btn-primary" type="button" onclick="window.location.href='{{ url('/') }}'">Back</button>
                     </div>
                     <div>
                         <button class="btn btn-primary" type="submit" name="kirim" onclick="window.location.href='http://127.0.0.1:8000/login'">Register</button>
