@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateFoodTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('food', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('food_name');
+            $table->integer('food_calories');
+            $table->integer('carbohydrate');
+            $table->integer('fat');
+            $table->integer('cholesterol');
+            $table->integer('protein');
+            $table->integer('sodium');
+            $table->integer('sugar');
+            $table->decimal('weight');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('food');
+    }
+}

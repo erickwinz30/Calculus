@@ -13,15 +13,17 @@ use Carbon\Carbon;
 class ModelFood extends Model
 {
     // use HasFactory;
-    public function searchFood($foodName) {
+    public function searchFood($foodName)
+    {
         $searchResult = DB::table('list_food')
-        ->where('food_name', 'like', '%'.$foodName.'%')
-        ->get();
+            ->where('food_name', 'like', '%' . $foodName . '%')
+            ->get();
 
         return $searchResult;
     }
 
-    public function addCalorieBreakfast($x) {
+    public function addCalorieBreakfast($x)
+    {
         $TODAY_DATE = Carbon::now('Asia/Jakarta');
         $amount = $x['input_gram'];
         $addFood = DB::table('list_food')->where('id_list_food', $x['input_id'])->first();
@@ -62,13 +64,13 @@ class ModelFood extends Model
         ]);
 
         $addCalorieToBreakfast = DB::table('breakfast')->insert([
-            'id' => Auth::user()->id,
+            'user_id' => Auth::user()->id,
             'id_food' => $id_food,
-            'date' => $TODAY_DATE,
         ]);
     }
 
-    public function addCalorieLunch($x) {
+    public function addCalorieLunch($x)
+    {
         $TODAY_DATE = Carbon::now('Asia/Jakarta');
         $amount = $x['input_gram'];
         $addFood = DB::table('list_food')->where('id_list_food', $x['input_id'])->first();
@@ -111,11 +113,11 @@ class ModelFood extends Model
         $addCalorieToBreakfast = DB::table('lunch')->insert([
             'id' => Auth::user()->id,
             'id_food' => $id_food,
-            'date' => $TODAY_DATE,
         ]);
     }
 
-    public function addCalorieDinner($x) {
+    public function addCalorieDinner($x)
+    {
         $TODAY_DATE = Carbon::now('Asia/Jakarta');
         $amount = $x['input_gram'];
         $addFood = DB::table('list_food')->where('id_list_food', $x['input_id'])->first();
@@ -158,11 +160,11 @@ class ModelFood extends Model
         $addCalorieToBreakfast = DB::table('dinner')->insert([
             'id' => Auth::user()->id,
             'id_food' => $id_food,
-            'date' => $TODAY_DATE,
         ]);
     }
 
-    public function addCalorieSnack($x) {
+    public function addCalorieSnack($x)
+    {
         $TODAY_DATE = Carbon::now('Asia/Jakarta');
         $amount = $x['input_gram'];
         $addFood = DB::table('list_food')->where('id_list_food', $x['input_id'])->first();
@@ -205,11 +207,11 @@ class ModelFood extends Model
         $addCalorieToBreakfast = DB::table('snack')->insert([
             'id' => Auth::user()->id,
             'id_food' => $id_food,
-            'date' => $TODAY_DATE,
         ]);
     }
 
-    public function addListFood($x) {
+    public function addListFood($x)
+    {
         $weight = $x['weight'];
         $food_calories = $x['food_calories'];
         $cholesterol = $x['cholesterol'];
@@ -233,18 +235,20 @@ class ModelFood extends Model
         ]);
     }
 
-    public function getFoodInfo($id_food) {
+    public function getFoodInfo($id_food)
+    {
         $foodInfo = DB::table('food')->where('id_food', $id_food)->get();
 
         return $foodInfo;
     }
 
-    public function updateFoodInfo($req, $id_food) {
+    public function updateFoodInfo($req, $id_food)
+    {
         $food = DB::table('food')->where('id_food', $id_food)->first();
         $updatedWeight = $req['weight'];
 
         $foodOldWeight = $food->weight;
-        
+
         //calculate old calories
         $old_food_calories = $food->food_calories / $foodOldWeight;
         $old_cholesterol = $food->cholesterol / $foodOldWeight;
@@ -275,27 +279,31 @@ class ModelFood extends Model
         ]);
     }
 
-    public function deleteBreakfastInfo($id_food) {
+    public function deleteBreakfastInfo($id_food)
+    {
         $deleteBreakfast = DB::table('breakfast')->where('id_food', $id_food)->delete();
 
         $deleteFood = DB::table('food')->where('id_food', $id_food)->delete();
-    }   
+    }
 
-    public function deleteLunchInfo($id_food) {
+    public function deleteLunchInfo($id_food)
+    {
         $deleteBreakfast = DB::table('lunch')->where('id_food', $id_food)->delete();
 
         $deleteFood = DB::table('food')->where('id_food', $id_food)->delete();
-    }  
+    }
 
-    public function deleteDinnerInfo($id_food) {
+    public function deleteDinnerInfo($id_food)
+    {
         $deleteBreakfast = DB::table('dinner')->where('id_food', $id_food)->delete();
 
         $deleteFood = DB::table('food')->where('id_food', $id_food)->delete();
-    }  
+    }
 
-    public function deleteSnackInfo($id_food) {
+    public function deleteSnackInfo($id_food)
+    {
         $deleteBreakfast = DB::table('snack')->where('id_food', $id_food)->delete();
 
         $deleteFood = DB::table('food')->where('id_food', $id_food)->delete();
-    }  
+    }
 }

@@ -13,25 +13,27 @@ class ModelMainPage extends Model
 
     public function readBreakfast($date)
     {
-        $id = Auth::user()->id;
+        $userId = Auth::user()->id;
 
-        $breakfast = DB::table('breakfast')
-            ->join('food', 'breakfast.id_food', '=', 'food.id_food')
-            ->select('food.id_food','food.food_name', 'food.food_calories', 'food.weight')
-            ->where('breakfast.id', $id)
-            ->where('breakfast.date', $date)
-            ->get();
+        $breakfast = DB::table('breakfasts')
+            ->join('food', 'breakfasts.id_food', '=', 'food.id') // Perbaiki dari 'breakfast' ke 'breakfasts'
+            ->where('breakfasts.user_id', $userId)
+            ->where('breakfasts.created_at', $date)
+            ->select(DB::raw('SUM(food.food_calories) as total_breakfast_calorie'))
+            ->first();
 
         return $breakfast;
+        // dd($breakfast);
     }
 
-    public function readBreakfastCalorie($date) {
-        $id = Auth::user()->id;
+    public function readBreakfastCalorie($date)
+    {
+        $userId = Auth::user()->id;
 
-        $breakfastCalorie = DB::table('breakfast')
-            ->join('food', 'breakfast.id_food', '=', 'food.id_food')
-            ->where('breakfast.id', $id)
-            ->where('breakfast.date', $date)
+        $breakfastCalorie = DB::table('breakfasts')
+            ->join('food', 'breakfasts.id_food', '=', 'food.id')
+            ->where('breakfasts.user_id', $userId)
+            ->where('breakfasts.created_at', $date)
             ->select(DB::raw('SUM(food.food_calories) as total_breakfast_calorie'))
             ->first();
 
@@ -40,25 +42,26 @@ class ModelMainPage extends Model
 
     public function readLunch($date)
     {
-        $id = Auth::user()->id;
+        $userId = Auth::user()->id;
 
-        $lunch = DB::table('lunch')
-            ->join('food', 'lunch.id_food', '=', 'food.id_food')
-            ->select('food.id_food', 'food.food_name', 'food.food_calories', 'food.weight')
-            ->where('lunch.id', $id)
-            ->where('lunch.date', $date)
+        $lunch = DB::table('lunches')
+            ->join('food', 'lunches.id_food', '=', 'food.id')
+            ->select('food.id', 'food.food_name', 'food.food_calories', 'food.weight')
+            ->where('lunches.user_id', $userId)
+            ->where('lunches.created_at', $date)
             ->get();
 
         return $lunch;
     }
 
-    public function readLunchCalorie($date) {
-        $id = Auth::user()->id;
+    public function readLunchCalorie($date)
+    {
+        $userId = Auth::user()->id;
 
-        $lunchCalorie = DB::table('lunch')
-            ->join('food', 'lunch.id_food', '=', 'food.id_food')
-            ->where('lunch.id', $id)
-            ->where('lunch.date', $date)
+        $lunchCalorie = DB::table('lunches')
+            ->join('food', 'lunches.id_food', '=', 'food.id')
+            ->where('lunches.id', $userId)
+            ->where('lunches.created_at', $date)
             ->select(DB::raw('SUM(food.food_calories) as total_lunch_calorie'))
             ->first();
 
@@ -67,25 +70,26 @@ class ModelMainPage extends Model
 
     public function readDinner($date)
     {
-        $id = Auth::user()->id;
+        $userId = Auth::user()->id;
 
-        $dinner = DB::table('dinner')
-            ->join('food', 'dinner.id_food', '=', 'food.id_food')
-            ->select('food.id_food', 'food.food_name', 'food.food_calories', 'food.weight')
-            ->where('dinner.id', $id)
-            ->where('dinner.date', $date)
+        $dinner = DB::table('dinners')
+            ->join('food', 'dinners.id_food', '=', 'food.id')
+            ->select('food.id', 'food.food_name', 'food.food_calories', 'food.weight')
+            ->where('dinners.user_id', $userId)
+            ->where('dinners.created_at', $date)
             ->get();
 
         return $dinner;
     }
 
-    public function readDinnerCalorie($date) {
-        $id = Auth::user()->id;
+    public function readDinnerCalorie($date)
+    {
+        $userId = Auth::user()->id;
 
-        $dinnerCalorie = DB::table('dinner')
-            ->join('food', 'dinner.id_food', '=', 'food.id_food')
-            ->where('dinner.id', $id)
-            ->where('dinner.date', $date)
+        $dinnerCalorie = DB::table('dinners')
+            ->join('food', 'dinners.id_food', '=', 'food.id')
+            ->where('dinners.user_id', $userId)
+            ->where('dinners.created_at', $date)
             ->select(DB::raw('SUM(food.food_calories) as total_dinner_calorie'))
             ->first();
 
@@ -94,25 +98,26 @@ class ModelMainPage extends Model
 
     public function readSnack($date)
     {
-        $id = Auth::user()->id;
+        $userId = Auth::user()->id;
 
-        $snack = DB::table('snack')
-            ->join('food', 'snack.id_food', '=', 'food.id_food')
-            ->select('food.id_food', 'food.food_name', 'food.food_calories', 'food.weight')
-            ->where('snack.id', $id)
-            ->where('snack.date', $date)
+        $snack = DB::table('snacks')
+            ->join('food', 'snacks.id_food', '=', 'food.id')
+            ->select('food.id', 'food.food_name', 'food.food_calories', 'food.weight')
+            ->where('snacks.id', $userId)
+            ->where('snacks.created_at', $date)
             ->get();
 
         return $snack;
     }
 
-    public function readSnackCalorie($date) {
-        $id = Auth::user()->id;
+    public function readSnackCalorie($date)
+    {
+        $userId = Auth::user()->id;
 
-        $snackCalorie = DB::table('snack')
-            ->join('food', 'snack.id_food', '=', 'food.id_food')
-            ->where('snack.id', $id)
-            ->where('snack.date', $date)
+        $snackCalorie = DB::table('snacks')
+            ->join('food', 'snacks.id_food', '=', 'food.id')
+            ->where('snacks.id', $userId)
+            ->where('snacks.created_at', $date)
             ->select(DB::raw('SUM(food.food_calories) as total_snack_calorie'))
             ->first();
 
@@ -124,29 +129,29 @@ class ModelMainPage extends Model
         $userID = Auth::user()->id;
 
         $subquery = DB::query()
-            ->select('id', 'id_food', 'date')
-            ->from('breakfast')
+            ->select('id', 'id_food', 'created_at')
+            ->from('breakfasts')
             ->unionAll(function ($query) {
-                $query->select('id', 'id_food', 'date')
-                    ->from('lunch');
+                $query->select('id', 'id_food', 'created_at')
+                    ->from('lunches');
             })
             ->unionAll(function ($query) {
-                $query->select('id', 'id_food', 'date')
-                    ->from('dinner');
+                $query->select('id', 'id_food', 'created_at')
+                    ->from('dinners');
             })
             ->unionAll(function ($query) {
-                $query->select('id', 'id_food', 'date')
-                    ->from('snack');
+                $query->select('id', 'id_food', 'created_at')
+                    ->from('snacks');
             });
 
         $totalNutrition = DB::table('users')
             ->joinSub($subquery, 'meals', function ($join) {
                 $join->on('users.id', '=', 'meals.id');
             })
-            ->join('food as meals_food', 'meals.id_food', 'meals_food.id_food')
+            ->join('food as meals_food', 'meals.id_food', 'meals_food.id')
             ->where('users.id', $userID)
             ->whereColumn('users.id', 'meals.id')
-            ->whereDate('meals.date', $date)
+            ->whereDate('meals.created_at', $date)
             ->select(
                 DB::raw('SUM(meals_food.food_calories) AS total_calories'),
                 DB::raw('SUM(meals_food.cholesterol) AS total_cholesterol'),
