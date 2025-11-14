@@ -19,7 +19,7 @@ class ModelMainPage extends Model
             ->join('food', 'breakfast.id_food', '=', 'food.id_food')
             ->select('food.id_food','food.food_name', 'food.food_calories', 'food.weight')
             ->where('breakfast.id', $id)
-            ->where('breakfast.date', $date)
+            ->whereDate('breakfast.date', $date)
             ->get();
 
         return $breakfast;
@@ -31,7 +31,7 @@ class ModelMainPage extends Model
         $breakfastCalorie = DB::table('breakfast')
             ->join('food', 'breakfast.id_food', '=', 'food.id_food')
             ->where('breakfast.id', $id)
-            ->where('breakfast.date', $date)
+            ->whereDate('breakfast.date', $date)
             ->select(DB::raw('SUM(food.food_calories) as total_breakfast_calorie'))
             ->first();
 
@@ -46,7 +46,7 @@ class ModelMainPage extends Model
             ->join('food', 'lunch.id_food', '=', 'food.id_food')
             ->select('food.id_food', 'food.food_name', 'food.food_calories', 'food.weight')
             ->where('lunch.id', $id)
-            ->where('lunch.date', $date)
+            ->whereDate('lunch.date', $date)
             ->get();
 
         return $lunch;
@@ -58,7 +58,7 @@ class ModelMainPage extends Model
         $lunchCalorie = DB::table('lunch')
             ->join('food', 'lunch.id_food', '=', 'food.id_food')
             ->where('lunch.id', $id)
-            ->where('lunch.date', $date)
+            ->whereDate('lunch.date', $date)
             ->select(DB::raw('SUM(food.food_calories) as total_lunch_calorie'))
             ->first();
 
@@ -73,7 +73,7 @@ class ModelMainPage extends Model
             ->join('food', 'dinner.id_food', '=', 'food.id_food')
             ->select('food.id_food', 'food.food_name', 'food.food_calories', 'food.weight')
             ->where('dinner.id', $id)
-            ->where('dinner.date', $date)
+            ->whereDate('dinner.date', $date)
             ->get();
 
         return $dinner;
@@ -85,7 +85,7 @@ class ModelMainPage extends Model
         $dinnerCalorie = DB::table('dinner')
             ->join('food', 'dinner.id_food', '=', 'food.id_food')
             ->where('dinner.id', $id)
-            ->where('dinner.date', $date)
+            ->whereDate('dinner.date', $date)
             ->select(DB::raw('SUM(food.food_calories) as total_dinner_calorie'))
             ->first();
 
@@ -100,7 +100,7 @@ class ModelMainPage extends Model
             ->join('food', 'snack.id_food', '=', 'food.id_food')
             ->select('food.id_food', 'food.food_name', 'food.food_calories', 'food.weight')
             ->where('snack.id', $id)
-            ->where('snack.date', $date)
+            ->whereDate('snack.date', $date)
             ->get();
 
         return $snack;
@@ -112,7 +112,7 @@ class ModelMainPage extends Model
         $snackCalorie = DB::table('snack')
             ->join('food', 'snack.id_food', '=', 'food.id_food')
             ->where('snack.id', $id)
-            ->where('snack.date', $date)
+            ->whereDate('snack.date', $date)
             ->select(DB::raw('SUM(food.food_calories) as total_snack_calorie'))
             ->first();
 
